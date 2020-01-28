@@ -1,0 +1,102 @@
+%% start of file `publications.bib'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux at gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+%\bibitem{Mil2}
+%Ghale, M.K., Gore, R., Pattinson, D., Tiwari, M.: Modular formalisation and verification of STV  algorithms. Forthcoming E-Vote-ID 2018, LNCS Springer (2018)
+
+@inproceedings{10.1145/3319535.3354247,
+author = {Haines, Thomas and Gor\'{e}, Rajeev and Tiwari, Mukesh},
+title = {Verified Verifiers for Verifying Elections},
+year = {2019},
+isbn = {9781450367479},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3319535.3354247},
+doi = {10.1145/3319535.3354247},
+booktitle = {Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {685–702},
+numpages = {18},
+keywords = {verifiable e-voting, code extraction, interactive theorem provers},
+location = {London, United Kingdom},
+series = {CCS ’19}
+}
+
+@inproceedings{mukesh,
+  title={Verifiable Homomorphic Tallying for the Schulze
+Vote Counting Scheme.},
+  author={Haines, Thomas, and Pattinson, Dirk and Tiwari, Mukesh},
+  booktitle={Verified Software: Theories, Tools, and Experiments},
+  year={2019},
+  note={to appear},
+  organization={Springer}
+}
+
+@InProceedings{10.1007/978-3-030-00419-4_4,
+author="Ghale, Milad K.
+and Gor{\'e}, Rajeev
+and Pattinson, Dirk
+and Tiwari, Mukesh",
+editor="Krimmer, Robert
+and Volkamer, Melanie
+and Cortier, V{\'e}ronique
+and Gor{\'e}, Rajeev
+and Hapsara, Manik
+and Serd{\"u}lt, Uwe
+and Duenas-Cid, David",
+title="Modular Formalisation and Verification of STV Algorithms",
+booktitle="Electronic Voting",
+year="2018",
+publisher="Springer International Publishing",
+address="Cham",
+pages="51--66",
+abstract="We introduce a formal, modular framework that captures a large number of different instances of the Single Transferable Vote (STV) counting scheme in a uniform way. The framework requires that each instance defines the precise mechanism of counting and transferring ballots, electing and eliminating candidates. From formal proofs of basic sanity conditions for each mechanism inside the Coq theorem prover, we then synthesise code that implements the given scheme in a provably correct way and produces a universally verifiable certificate of the count. We have applied this to various variations of STV, including several used in Australian parliamentary elections and demonstrated the feasibility of our approach by means of real-world case studies.",
+isbn="978-3-030-00419-4"
+}
+
+
+@InProceedings{10.1007/978-3-319-68687-5_5,
+author="Bennett Moses, Lyria
+and Gor{\'e}, Rajeev
+and Levy, Ron
+and Pattinson, Dirk
+and Tiwari, Mukesh",
+editor="Krimmer, Robert
+and Volkamer, Melanie
+and Braun Binder, Nadja
+and Kersting, Norbert
+and Pereira, Olivier
+and Sch{\"u}rmann, Carsten",
+title="No More Excuses: Automated Synthesis of Practical and Verifiable Vote-Counting Programs for Complex Voting Schemes",
+booktitle="Electronic Voting",
+year="2017",
+publisher="Springer International Publishing",
+address="Cham",
+pages="66--83",
+abstract="We argue that electronic vote-counting software can engender broad-based public trust in elections to public office only if they are formally verified against their legal definition and only if they can produce an easily verifiable certificate for the correctness of the count. We then show that both are achievable for the Schulze method of vote-counting, even when the election involves millions of ballots. We argue that our methodology is applicable to any vote-counting scheme that is rigorously specified. Consequently, the current practice of using unverified and unverifiable vote counting software for elections to public office is untenable. In particular, proprietary closed source vote-counting software is simply inexcusable.",
+isbn="978-3-319-68687-5"
+}
+
+@InProceedings{10.1007/978-3-319-66107-0_26,
+author="Pattinson, Dirk
+and Tiwari, Mukesh",
+editor="Ayala-Rinc{\'o}n, Mauricio
+and Mu{\~{n}}oz, C{\'e}sar A.",
+title="Schulze Voting as Evidence Carrying Computation",
+booktitle="Interactive Theorem Proving",
+year="2017",
+publisher="Springer International Publishing",
+address="Cham",
+pages="410--426",
+abstract="The correctness of vote counting in electronic election is one of the main pillars that engenders trust in electronic elections. However, the present state of the art in vote counting leaves much to be desired: while some jurisdictions publish the source code of vote counting code, others treat the code as commercial in confidence. None of the systems in use today applies any formal verification. In this paper, we formally specify the so-called Schulze method, a vote counting scheme that is gaining popularity on the open source community. The cornerstone of our formalisation is a (dependent, inductive) type that represents all correct executions of the vote counting scheme. Every inhabitant of this type not only gives a final result, but also all intermediate steps that lead to this result, and can so be externally verified. As a consequence, we do not even need to trust the execution of the (verified) algorithm: the correctness of a particular run of the vote counting code can be verified on the basis of the evidence for correctness that is produced along with determination of election winners.",
+isbn="978-3-319-66107-0"
+}
+
+
+
+
+%% end of file `publications.bib'.
