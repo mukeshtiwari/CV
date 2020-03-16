@@ -33,10 +33,10 @@
 \email{mukesh.tiwari@anu.edu.au, mukeshtiwari.iiitm@gmail.com}                               % optional, remove / comment the line if not wanted
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 \social[linkedin]{mukesh-tiwari-3609486/}                        % optional, remove / comment the line if not wanted
-%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+\social[twitter]{mukesh\_tiwari}                             % optional, remove / comment the line if not wanted
 \social[github]{mukeshtiwari}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\photo[64pt][0.4pt]{DP.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
                                 % optional, remove / comment the line if not wanted
 
 % bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
@@ -62,14 +62,15 @@
 
 \section{PhD thesis}
 \cvitem{Title}{\emph{Formally Verified Verifiable Electronic Voting Scheme}}
-\cvitem{Supervisor}{Prof. Dirk Pattinson}
-\cvitem{Description}{We focussed on the three main concerns posed by electronic voting, i.e. 
+\cvitem{Supervisor}{Dirk Pattinson}
+\cvitem{Description}{We focussed on the three main concerns posed by electronic voting: 
 correctness, privacy, and verifiability. We addressed the correctness concern by using 
-a theorem prover to implement the vote counting algorithm, 
-privacy concern by using homomorphic encryption, and verifiability concern 
-by generating a independently checkable scrutiny sheet (certificate). Our work 
-has been carried out in Coq theorem prover. }
-
+a theorem prover to implement the vote counting algorithm (including various 
+machine checked proof of correctness), 
+privacy concern by using homomorphic encryption  (computed the final tally homomorphically 
+without decrypting any individual ballots), and verifiability concern 
+by generating a independently checkable scrutiny sheet (augmented with zero-knowledge-proofs). 
+Our work has been carried out in Coq theorem prover. }
 \section{Experience}
 %\subsection{Vocational}
 %\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
@@ -104,7 +105,7 @@ has been carried out in Coq theorem prover. }
 %\cvitemwithcomment{Language 3}{Skill level}{Comment}
 
 \section{Skills}
-\cvitem{Coding}{Coq, Haskell, OCaml, Idris, Racket, Clojure, Isabelle, Python, C, Java}
+\cvitem{Coding}{Coq, Haskell, OCaml, Idris, Racket, Clojure, Lean, Isabelle, Python, C, Java}
 \cvitem{Language}{Hindi, English}
 
 %\section{Interests}
@@ -131,17 +132,22 @@ has been carried out in Coq theorem prover. }
 
 \section{References}
 \begin{cvcolumns}
-  \cvcolumn{}{\begin{itemize}\item Prof. Dirk Pattinson, Research School of Computer Science, Australian National University, Canberra, dirk.pattinson@anu.edu.au
+  \cvcolumn{}{\begin{itemize}\item Dirk Pattinson, Research School of Computer Science, Australian National University, Canberra, dirk.pattinson@anu.edu.au
    \end{itemize}}
    \end{cvcolumns}
+\begin{cvcolumns}
+  \cvcolumn{}{\begin{itemize}\item Toby Murray, School of Computing and Information Systems, University of Melbourne, Melbourne, toby.murray@unimelb.edu.au
+   \end{itemize}}
+\end{cvcolumns}   
    \begin{cvcolumns}
-  \cvcolumn{}{\begin{itemize}\item Prof. Rajeev Gor{\'e}, Research School of Computer Science, Australian National University, Canberra, rajeev.gore@anu.edu.au \end{itemize}}
+  \cvcolumn{}{\begin{itemize}\item Rajeev Gor{\'e}, Research School of Computer Science, Australian National University, Canberra, rajeev.gore@anu.edu.au \end{itemize}}
 %\cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
 \end{cvcolumns}
 \begin{cvcolumns}
   \cvcolumn{}{\begin{itemize}\item Thomas Haines, Department of Mathematical Sciences, Norwegian University of Science and Technology, Gløshaugen, thomas.haines@ntnu.no
    \end{itemize}}
 \end{cvcolumns}
+
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
