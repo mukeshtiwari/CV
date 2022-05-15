@@ -20,6 +20,7 @@
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
+%\usepackage[backend=biber]{biblatex}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -27,13 +28,13 @@
 \name{Mukesh}{Tiwari}
                               % optional, remove / comment the line if not wanted
 %\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+61-422059750}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\phone[mobile]{+44-7824648138}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
-\email{mukesh.tiwari@unimelb.edu.au, mukesh.tiwari@anu.edu.au, mukeshtiwari.iiitm@gmail.com}                               % optional, remove / comment the line if not wanted
+\email{mt883@cam.ac.uk, mukesh.tiwari@anu.edu.au, mukeshtiwari.iiitm@gmail.com}                               % optional, remove / comment the line if not wanted
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 \social[linkedin]{mukesh-tiwari-3609486/}                        % optional, remove / comment the line if not wanted
-\social[twitter]{mukesh\_tiwari}                             % optional, remove / comment the line if not wanted
+%\social[twitter]{mukesh\_tiwari}                             % optional, remove / comment the line if not wanted
 \social[github]{mukeshtiwari}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{DP.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
@@ -44,6 +45,7 @@
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 %   to redefine the bibliography heading string ("Publications")
 %\renewcommand{\refname}{Articles}
+
 
 % bibliography with mutiple entries
 %\usepackage{multibib}
@@ -63,34 +65,21 @@
 \section{PhD thesis}
 \cvitem{Title}{\emph{Formally Verified Verifiable Electronic Voting Scheme}}
 \cvitem{Supervisor}{Dirk Pattinson}
-\cvitem{Description}{We focussed on the three crucial challenges, amongst many others,  posed by electronic voting: 
+\cvitem{Description}{We focussed on three main challenges posed by electronic voting: 
 correctness, privacy, and verifiability. We addressed correctness by using 
 a theorem prover to implement the vote counting algorithm, 
 privacy by using homomorphic encryption,  and verifiability 
 by generating a independently checkable scrutiny sheet. 
 Our work has been carried out in Coq theorem prover. }
-\section{Experience}
-%\subsection{Vocational}
-%\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
-%Detailed achievements:%
-%\begin{itemize}%
-%\item Achievement 1;
-%\item Achievement 2, with sub-achievements:
-%  \begin{itemize}%
-%  \item Sub-achievement (a);
-%  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-%    \begin{itemize}
-%    \item Sub-sub-achievement i;
-%    \item Sub-sub-achievement ii;
-%    \item Sub-sub-achievement iii;
-%    \end{itemize}
-%  \item Sub-achievement (c);
-%  \end{itemize}
-%\item Achievement 3.
-%\end{itemize}}
-\cventry{2020--}{Research Fellow}{University of Melbourne}{Melbourne}{Australia}
-  {Currently, I am working with Toby Murray  on \textit{Security Concurrent Separation Logic}. The aim is 
-  to formally reason about memory safety and information flow property of concurrent programs,  written in C.}
+\cventry{2021-}{Senior Research Fellow}{University of Cambridge}{Cambridge}{United Kingdom}
+  {I am working on formalising network protocols framework to ensure their safety and
+  security. The goal is to develop a mathematical 
+  framework, proven correct in a theorem prover, so that a protocol 
+  designer can assess the properties of their design using my framework}
+\cventry{2020-21}{Research Fellow}{University of Melbourne}{Melbourne}{Australia}
+  {I worked with Toby Murray  on \textit{Security Concurrent Separation Logic}. 
+  The aim was 
+  to formally (mathematically) reason about memory safety and information flow property of concurrent programs,  written in C.}
 \cventry{2013--2015}{Lecturer}{International Institute of Information Technology}{Bhubaneswar}{India}
 {This role was primarily geared towards teaching, and 
 the courses I taught were \textit{C programming} and \textit{Cryptography}.  In addition,  every year I supervised two
@@ -107,7 +96,6 @@ written in Haskell.}
 \cventry{2008--2008}{Summer Intern} {Arcelor Mittal, Research \& Development Technological Centre} {Avil{\'e}s} {Spain} 
 {During this role, I worked on formalising many business requirements into a linear programming problem and wrote a 
  custom interface that interacted with their in-house linear programming solver.}
-
 
 %\section{Languages}
 %\cvitemwithcomment{Language 1}{Skill level}{Comment}
@@ -140,9 +128,39 @@ written in Haskell.}
 \cvitem{} {Travel Scholarship to attend Marktoberdorf Summer School 2019}
 
 
+\nocite{*}
 \bibliographystyle{plainyr-rev}
 \bibliography{publications}
-\nocite{*}
+
+\section{Work in Progress}
+\cvitem{1}{Verified Secure Declassification for Concurrent Applications. In this work, 
+    we develop a formal model of leaking sensitive data.}
+\cvitem{2}{Theorem Provers to Protect Democracies. In this work, we develop a formally 
+    verified algorithm that can be used to bootstrap a democratic election.}
+\cvitem{3}{Modelling Networking Protocols Mathematically. In this work, we develop 
+    a formally verified framework that a network protocol designer can use to verify 
+    the security properties of their protocol}      
+\cvitem{4}{Machine Checking the Bayer-Groth Proof of Shuffle. In this work, 
+    we formalise the  Bayer-Groth Proof of Shuffle, used in many democratic elections 
+    to shuffle the ballot.}
+\cvitem{5}{Towards Leakage-Resistant Machine Learning in Trusted Execution Environments. In this
+    work, we develop a machine learning algorithm that is proven constant time. It is applicable 
+    in a scenario when the training data is sensitive and model is trained in a cloud}.    
+  
+
+\section{References}
+\begin{cvcolumns}
+  \cvcolumn{}{\begin{itemize}\item Dirk Pattinson, Research School of Computer Science, Australian National University, Canberra, dirk.pattinson@anu.edu.au
+   \end{itemize}}
+   \end{cvcolumns}
+\begin{cvcolumns}
+  \cvcolumn{}{\begin{itemize}\item Toby Murray, School of Computing and Information Systems, University of Melbourne, Melbourne, toby.murray@unimelb.edu.au
+   \end{itemize}}
+\end{cvcolumns}
+\begin{cvcolumns}
+  \cvcolumn{}{\begin{itemize}\item Thomas Haines, Research School of Computer Science, Australian National University, Canberra, thomas.haines@anu.edu.au
+   \end{itemize}}
+\end{cvcolumns}
 
 
 % Publications from a BibTeX file without multibib
