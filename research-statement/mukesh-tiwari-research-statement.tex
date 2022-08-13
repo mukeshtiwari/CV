@@ -204,15 +204,17 @@ networking, verified cryptography, verified distributed systems, etc.
 	Currently, CAS formalisation is highly focused on networking protocols, but it can be 
 	adapted for other areas, e.g., optimisation, clustering, algebraic program 
 	analysis , etc. In the CAS, we use an abstract algebraic structure 
-	\emph{semiring} --set $A$ equipped with two binary operators $+$ and $*$, 
+	\emph{semiring}\footnote{A set $R$ equipped with two binary operators $+$ and $*$, 
 	known as (abstract) addition and (abstract) multiplication, $0$, (abstract) additive identity, 
-	$1$, (abstract) multiplicative identity-- as an underlying structure
+	$1$, (abstract) multiplicative identity such that 
+	($R$, $+$, $0$) is commutative monoid and ($R$, $*$, $1$) is monoid. 
+	In addition, (abstract) multiplicative distribute over (abstract)  addition and 
+	$0$ is (abstract) multiplicative annihilator.} as an underlying structure
 	for computation and and we model various algorithm at the top this 
 	structure. In this setting, an algorithm can compute different values depending 
 	on the concrete structure of semiring. For example, the same algorithm 
-	can compute shortest path in a graph, longest paths in a graph, analyse the 
-	data flow of imperative programs, optimally pack knapsacks, and perform 
-	discrete event simulations \cite{gondran2008graphs, 10.1145/2500365.2500613}.
+	can compute shortest path, longest paths, 
+	data flow of imperative programs \cite{gondran2008graphs, 10.1145/2500365.2500613}.
 	
 
 \end{itemize}
