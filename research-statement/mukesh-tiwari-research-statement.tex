@@ -122,9 +122,9 @@ research, given that its underlying principles are very similar to protocol desi
 
 At the university of Melbourne, I worked on 
 security concurrent separation logic for formally reasoning the information flow in concurrent programs. 
-I used SecureC, tool developed at the university of Melbourne, to formalise an email server, 
+I used SecureC, a tool developed at the university of Melbourne, to formalise an email server, 
 an auction server, and a location server. All these works were proven to leaks no sensitive 
-information to attackers, assuming that compiler respects all assumption (this work is under submission). 
+information to attackers, assuming that compiler respects all assumption\footnote{under submission}. 
 In addition, I also developed a information flow secure gradient descent algorithm in SecureC for 
 trusted execution environment, e.g., Intel SGX and ARM TrustZone. This work has been 
 informally presented at PaveTrust\footnote{\url{https://www.acsac.org/2021/workshops/pavetrust/PAVeTrust-Program.pdf}}.
@@ -157,7 +157,8 @@ verifying election outcomes, etc. It would  encourage the voters to
 actively participate in various decision making process without any fear of vote selling.
 
 \item focus on formally verified cryptographic primitives used in electronic voting, e.g., 
-	sigma protocols (zero-knowledge-proof), verifiable (shuffling) mix-nets, etc., in Coq theorem prover. 
+	sigma protocols (zero-knowledge-proof), verifiable (shuffling) mix-nets, 
+	multi-party computations, etc., in Coq theorem prover. 
 	In my all projects, I have formalised various 
 	cryptographic primitives but ended up extracting OCaml code\footnote{We can extract OCaml/Haskell/Scheme 
 	code from Coq formalisation.} and used OCaml compiler to 
@@ -179,8 +180,8 @@ is facing a threat, if charged guilty, of lifetime jail after
 leaking the material alleging war crimes by members of the Australia's Special Operations
 Task Group in Afghanistan (Australia is ranked very high in 
 democracy index\footnote{\url{https://worldpopulationreview.com/country-rankings/democracy-countries}}). 
-This reasearch opens the door of collaboration with many groups working in verified 
-networking, verified cryptography, verified distributed systems, etc. 
+This research opens the door of collaboration with many groups working in verified 
+networking, verified distributed systems, etc. 
 
 
 
@@ -212,10 +213,10 @@ networking, verified cryptography, verified distributed systems, etc.
 	$0$ is (abstract) multiplicative annihilator.} as an underlying structure
 	for computation and and we model various algorithm at the top this 
 	structure. In this setting, an algorithm can compute different values depending 
-	on the concrete structure of semiring. For example, the same algorithm 
+	on the concrete structure of semiring, e.g., the same algorithm 
 	can compute shortest path, longest paths, 
-	data flow of imperative programs \cite{gondran2008graphs, 10.1145/2500365.2500613} for 
-	an appropriate semiring.
+	data flow of imperative programs, and many more, \cite{gondran2008graphs} 
+	for an appropriate semiring.
 	
 
 \end{itemize}
