@@ -1,7 +1,7 @@
 \documentclass[a4paper]{article}
 \title{Research Statement}
 \author{Mukesh Tiwari}
-\date{\today}
+\date{}
 \usepackage{url}
 \setlength{\topmargin}{-10mm}
 \setlength{\textwidth}{7in}
@@ -14,20 +14,20 @@
 \selectfont
 \maketitle
 
-My work aims to build \textbf{correct software programs used in democratic processes}, 
+My work aims to build \textbf{correct software programs} 
 using the Coq theorem prover. 
 I focus on formal verification of software programs used in elections, 
 cryptographic primitives used in elections, and computational social choice theory.  
 Various critical decisions, e.g., electing the winner of an election, 
-are taken by governments based on the output produced by these software programs. 
-However, if these 
+are taken by an election commission based on the output produced by software programs. 
+However, if the
 software programs contain bugs, then they may produce a wrong 
 output. As a result, it could hamper the trust of  
-members of general public in the decision making of government. 
+members of general public in the decision-making process.
 Worse yet, nowadays there is more and more automation of decision-making 
 in various bodies of a government (democracies) based on software programs, 
 and therefore it is more imperative than ever  that  we formally verify these software programs and 
-develop software tools to automate the formal verification process to make the decision-making more trustworthy. 
+develop tools to automate the formal verification process to make the decision-making more trustworthy. 
 
 Fair elections are the only way to keep a democracy alive. Most countries (election commission) use paper ballots to record 
 its citizens' votes (preferences), and then election commission officials produce the final tally from these votes, 
@@ -138,50 +138,53 @@ My expertise in \textbf{Theorem Proving, Election Security, and Cryptography}
 gives me an unique perspective to solve challenging problems that matter to many democracies. 
 
 Throughout my past and current research, I have extensively used formal verification techniques 
-to verify the software programs, and I would like to continue to do so in the future as well. 
-In future, I would like to:
+to verify the software programs, and I will continue to do so in the future as well. 
+In future, I will:
 
 \begin{itemize}
 
-\item focus on developing formally verified (electronic) voting software (components) programs 
-for low coercion situations to promote direct democracy in Coq theorem prover. Switzerland often 
-conducts referendums on issues that matter to their democracy and encourages its citizens 
-to participate actively in decision making. It would be interesting to design and 
-implement electronic voting components, verified in Coq theorem prover, for low-coercion 
-situations for various vote counting methods such as Single Transferable Vote, First Past the Post, 
-Instant-runoff, etc., on encrypted ballots. All these voting methods 
-differs from each other so counting on encrypted ballot would be challenging task, while 
-ensuring correctness, privacy, and verifiability.  
-The rationale is that once we have a formally verified components, anyone --government or 
-members of general public-- can use them for conducting elections, referendums, 
-verifying election outcomes, etc. It would  encourage the voters to 
-actively participate in various decision making process without fear of vote selling.
+\item focus on developing formally verified (electronic) voting 
+software (components) programs in Coq theorem prover. 
+The rationale is that once we have formally verified 
+components, anyone --government or members of general public-- can use them 
+to conduct elections, referendums, and verifying election outcomes.
+It will be interesting to design and implement electronic voting components  
+for various vote counting methods such as \textit{Single Transferable Vote (STV), 
+First Past the Post (FPTP), Instant-runoff, etc.} on encrypted ballots. These 
+voting methods differ from each other so producing final tally from encrypted 
+ballot will be a challenging task, while ensuring correctness, privacy, and verifiability. 
+The outcome of this project can be used by election commissions and citizens of 
+the countries that are using software programs to conduct elections, e.g.,
+Australia, Switzerland, Canada, France, etc. 
 
-\item focus on formally verified cryptographic primitives used in electronic voting, e.g., 
+
+\item focus on formally verified cryptographic primitives used in electronic voting, 
+  Internet of Things (IoT), blockchain, e.g., 
 	sigma protocols (zero-knowledge-proof), verifiable (shuffling) mix-nets, 
-	multi-party computations, etc., in Coq theorem prover. 
-	In my all projects, I have formalised
-	cryptographic primitives but ended up extracting OCaml code\footnote{We can extract OCaml/Haskell/Scheme 
+	multi-party computations, secret sharing, secure communication, zk-snark, etc., 
+	in Coq theorem prover. In my all projects, I have formalised
+	cryptographic primitives but ended up extracting OCaml 
+	code\footnote{We can extract OCaml/Haskell/Scheme 
 	code from Coq formalisation.} and used OCaml compiler to 
 	compile the code to machine level. However, OCaml compiler is not proven correct 
-	and therefore it may introduce new bugs in our code. The challenging part of this project would be 
-	to compile the formalised Coq cryptographic code to assembly, or binary, code all the way 
-	down to machine level. It is highly non-trivial, but it opens the door of 
+	and therefore it may introduce new bugs in our code. The challenging part 
+	of this project will be to compile the formalised Coq cryptographic 
+	code to assembly, or binary, code 
+	all the way down to machine level. It is highly non-trivial, but it opens the door of 
 	collaboration with other research group working in verified compilation.
 
 \item focus on formally verified decentralised peer-to-peer technical solution, inspired by 
 \cite{liu2004linkable, Clarke2001, schimmer2009peer}, in Coq theorem prover which will help 
-whistleblowers in leaking documents and exposing 
-corruption without revealing their identity. 
+whistleblowers in leaking documents and exposing corruption without revealing their identity. 
 Being vocal against the government is one the most fundamental right of any citizen, but many 
 authoritative governments do not appreciate dissent of any form. Therefore, it uses 
-its powerful machinery to punish the dissident, in the name of national security. For example,
-David McBridge, a former Australian Defence Force lawyer,  
-is facing a threat, if charged guilty, of lifetime jail after
+its powerful machinery to punish the dissident, in the name of national security. 
+For example, David McBridge, a former Australian Defence Force lawyer,  
+is facing a threat of lifetime jail after
 leaking the material alleging war crimes by members of the Australia's Special Operations
 Task Group in Afghanistan (Australia is ranked very high in 
 democracy index\footnote{\url{https://worldpopulationreview.com/country-rankings/democracy-countries}}). 
-This research opens the door of collaboration with many groups working in verified 
+This research will open the door of collaboration with many groups working in verified 
 networking, and verified distributed systems. 
 
 
@@ -192,12 +195,13 @@ networking, and verified distributed systems.
 	Polynomial runtime, etc., so when we formalise Schulze method, or in fact any vote-counting method,
 	in Coq theorem prover, we can push the boundary of correctness by proving that our 
 	implementation of Schulze method also follows all the properties, i.e.,  Condorcet criterion, Reversal symmetry,
-	Polynomial runtime, etc  \cite{tiwari2021machine}. 
+	Polynomial runtime  \cite{tiwari2021machine}. 
 	In addition, we can also analyse these 
-	methods from computational point of view, also by formalising it in the Coq theorem prover, 
-	that how easy from computational perspective to change the outcome of an election, etc. 
+	methods from computational complexity point of view whether by a certain amount of bribing
+	voters a specified candidate can be made the election's winner \cite{faliszewski2006complexity},
+	also by formalising it in the Coq theorem prover. 
 	This research opens the door of collaboration with political scientists, 
-	social choice theorists, economists, game theorists, etc. 
+	social choice theorists, economists, and game theorists.
 
 	
 
@@ -220,7 +224,7 @@ networking, and verified distributed systems.
 My lab will be a very diverse place where students and researchers from formal 
 verification, cryptography, 
 political science, social science, social choice theory will interact, discuss, 
-collaborate on the ideas that matters to democracies.
+collaborate on the ideas that matters to democracies and societies.
 
 
 \bibliography{research-statement-bibliography} 
