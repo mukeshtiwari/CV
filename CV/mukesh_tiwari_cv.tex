@@ -24,6 +24,11 @@
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+
+
+
+
+
 % personal data
 \name{Mukesh}{Tiwari}
                               % optional, remove / comment the line if not wanted
@@ -45,6 +50,8 @@
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 %   to redefine the bibliography heading string ("Publications")
 %\renewcommand{\refname}{Articles}
+
+
 
 
 % bibliography with mutiple entries
@@ -132,10 +139,11 @@ written in Haskell.}
 \bibliographystyle{plainyr-rev}
 \bibliography{publications}
 
+
 \section{Work in Progress}
 \cvitem{1}{Verified Secure Declassification for Concurrent Applications. In this work, 
     we develop a formal model of leaking sensitive data.}
-\cvitem{2}{Theorem Provers to Protect Democracies. In this work, we develop a formally 
+\cvitem{2}{Formally Verified Verifiable Group Generators. In this work, we develop a formally 
     verified algorithm that can be used to bootstrap a democratic election.}
 \cvitem{3}{Modelling Networking Protocols Mathematically. In this work, we develop 
     a formally verified framework that a network protocol designer can use to verify 
@@ -143,9 +151,10 @@ written in Haskell.}
 \cvitem{4}{Machine Checking the Bayer-Groth Proof of Shuffle. In this work, 
     we formalise the  Bayer-Groth Proof of Shuffle, used in many democratic elections 
     to shuffle the ballot.}
-\cvitem{5}{Towards Leakage-Resistant Machine Learning in Trusted Execution Environments. In this
-    work, we develop a machine learning algorithm that is proven constant time. It is applicable 
-    in a scenario when the training data is sensitive and model is trained in a cloud}.    
+\cvitem{5}{Theorem Provers to Protect Democracies. In this work, we are formalising 
+    all the cryptographic components, written in Java, used in Swiss Post in Coq theorem
+    prover. Our goal is to write an independent verifier for scrutine sheet of  elections conducted by 
+    Swiss Post software programs.}
   
 
 \section{References}
@@ -154,11 +163,19 @@ written in Haskell.}
    \end{itemize}}
    \end{cvcolumns}
 \begin{cvcolumns}
-  \cvcolumn{}{\begin{itemize}\item Toby Murray, School of Computing and Information Systems, University of Melbourne, Melbourne, toby.murray@unimelb.edu.au
+  \cvcolumn{}{\begin{itemize}\item Timothy Griffin, Computer Laboratory,  University of Cambridge, Cambridge, tgg22@cam.ac.uk
    \end{itemize}}
 \end{cvcolumns}
 \begin{cvcolumns}
   \cvcolumn{}{\begin{itemize}\item Thomas Haines, Research School of Computer Science, Australian National University, Canberra, thomas.haines@anu.edu.au
+   \end{itemize}}
+\end{cvcolumns}
+\begin{cvcolumns}
+  \cvcolumn{}{\begin{itemize}\item Toby Murray, School of Computing and Information Systems, University of Melbourne, Melbourne, toby.murray@unimelb.edu.au
+   \end{itemize}}
+\end{cvcolumns}
+\begin{cvcolumns}
+  \cvcolumn{}{\begin{itemize}\item  V{\'e}ronique Cortier, Research Director, CNRS, LORIA, Nancy, France, veronique.cortier@loria.fr
    \end{itemize}}
 \end{cvcolumns}
 
