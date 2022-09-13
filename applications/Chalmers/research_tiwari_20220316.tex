@@ -1,0 +1,213 @@
+\documentclass[a4paper]{article}
+\title{Research and Teaching Statement}
+\author{Mukesh Tiwari}
+\date{}
+\usepackage{url}
+\setlength{\topmargin}{-10mm}
+\setlength{\textwidth}{7in}
+\setlength{\oddsidemargin}{-8mm}
+\setlength{\textheight}{9in}
+\setlength{\footskip}{1in}
+\linespread{0.90} 
+\begin{document}
+\fontsize{12}{15}
+\selectfont
+\maketitle
+
+
+My work aims to build \textbf{correct software programs} 
+using the Coq theorem prover. 
+I focus on formal verification of software programs used in elections, cryptography, 
+networking, and computational social choice theory. Numerous critical decisions, e.g., 
+producing the winner of an election by an election commission,
+are taken based on the output of a software program. However, if the
+software program contains bugs, then it may produce a wrong 
+output. Therefore, the government entity (election commission) can 
+lose its reputation. In addition, it can also hamper the trust of  
+members of general public in the government decision-making processes.
+Worse yet, nowadays there is more and more automation of decision-making 
+in various bodies of a government (democracies) based on software programs.
+Therefore, it is more imperative than ever  that  we formally verify these software programs and 
+develop tools to automate the formal verification process to make the 
+government decision-making more trustworthy. 
+
+\section{PhD Work}
+My PhD research was focused on verifying electronic voting, specifically vote-counting schemes, in 
+the Coq theorem prover. The goal was to 
+bring  three important ingredients, correctness, privacy, and (universal) verifiability, of a paper ballot election to 
+an electronic setting (electronic voting). In a paper ballot election, correctness is
+ensured by scrutineers, and privacy and verifiability  
+come for free because of secret paper ballots.  However, achieving these three desirable properties 
+are difficult in 
+electronic voting because software programs, used in 
+various stages of an election, work in a opaque (blackbox) manner. In this (electronic) setting, 
+a software program produces the final tally from the cast ballots without any human (scrutineers) involvement, 
+other than pressing some 
+buttons to run the software program. 
+
+\section{Future Work}
+My long-term aim is to make formal verification accessible and ubiquitous in 
+software development, specifically for the software programs deployed in public domain
+that affect common people.
+My expertise in \textbf{Theorem Proving, Cryptography, and Election Security}
+gives me an unique perspective to solve challenging problems that matter to many democracies 
+and its citizens. In future, I will:
+
+\begin{itemize}
+
+
+
+\item focus on formally verified cryptographic primitives used in electronic voting, 
+  Internet of Things (IoT), and blockchain, e.g., 
+	sigma protocols (zero-knowledge-proof), verifiable (shuffling) mix-networks, 
+	multi-party computations, secret sharing, secure communication, zk-snark, etc. 
+	In some of my projects, I have formalised
+	cryptographic primitives but ended up extracting OCaml 
+	code\footnote{We can extract OCaml/Haskell/Scheme 
+	code from Coq formalisation.} and used OCaml compiler to 
+	compile the code to machine level. However, OCaml compiler is not proven correct 
+	and therefore it may introduce new bugs in the compiled code. The challenging part 
+	of this project will be to compile a formalised Coq cryptographic 
+	code to an assembly code. It is highly non-trivial, but it opens the door of 
+	collaboration with other research group working in verified compilation.
+
+\item focus on developing formally verified (electronic) voting 
+software (components) programs in Coq theorem prover. 
+The rationale is that once we have formally verified 
+components, anyone --election commission or members of general public-- can use them 
+to conduct elections, referendums, and verify elections' outcome.
+It will be interesting to design and implement electronic voting components  
+for vote counting methods such as \textit{Single Transferable Vote (STV), 
+First Past the Post (FPTP), Instant-runoff, etc.} on encrypted ballots. These 
+voting methods differ from each other so producing final tally from encrypted 
+ballot will be a challenging task, while ensuring correctness, privacy, and 
+verifiability. The outcome of this project can be used by election commissions and citizens of 
+the countries that are using software programs to conduct elections, e.g.,
+Australia, Switzerland, Canada, France, etc. 
+
+\item focus on formally verified decentralised peer-to-peer technical solution, inspired by 
+\cite{liu2004linkable, Clarke2001, schimmer2009peer}, in Coq theorem prover which will help 
+whistleblowers in leaking documents and exposing corruption without revealing their identity. 
+Being vocal against the government is one the most fundamental right of any citizen, but many 
+authoritative governments do not appreciate dissent of any form. Therefore, it uses 
+its powerful machinery to punish the dissident, in the name of national security.  
+This research will open the door of collaboration with many groups working in verified 
+networking, and verified distributed systems. 
+
+
+
+\item focus on formally verified combinators for algebraic structure (CAS) in Coq theorem prover 
+	(continue my collaboration with Timothy Griffin). 
+	Currently, CAS formalisation is highly focused on networking protocols, but it can be 
+	adapted for other areas, e.g., optimisation, clustering, algebraic program 
+	analysis , etc. In the CAS, we use an abstract algebraic structure 
+	\emph{semiring} as an underlying structure
+	for computation and and we model various algorithm at the top this 
+	structure. In this setting, an algorithm can compute different values depending 
+	on the concrete structure of semiring, e.g., the same algorithm 
+	can compute shortest path, longest paths, 
+	data flow of imperative programs, and many more \cite{gondran2008graphs} 
+	for an appropriate semiring.
+	
+
+\end{itemize}
+
+
+
+\section{Teaching Experience}
+My teaching philosophy is to not immediately reach a solution but to develop a 
+thinking process (problem solving mindset) that leads to the solution. I believe every 
+student is different and has a unique style of learning, and my role is to help them find 
+and hone their style.
+
+
+When I started teaching as an assistant professor at the International Institute of Information 
+Technology (IIIT), Bhubanesware, India\footnote{It is a small technical school},
+my single biggest challenge was keeping the students engaged in my class, especially the first year 
+students in C programming course. At the IIIT, I taught C programming to 
+first year students, Compiler Design and Java programming to third year students, and
+Cryptography to final year (4th year) students. In each course, every single 
+problem,  more or less, boiled down to keeping the students engaged in a topic. 
+In order to keep them engaged in a class, I took a Coursera course on 
+learning\footnote{\url{https://www.coursera.org/learn/learning-how-to-learn}} and 
+read many academic articles and non-academic articles about effective learning.
+I tried some of the techniques suggested in the Coursera course and 
+academic and non-academic articles in my classes. Below I 
+describe my experiences with teaching and efforts to engage my students. 
+
+
+
+
+
+\subsection{Setting Clear Goals}
+In every course, I started with the end goal of the course. For example, 
+in C programming course, I told my students that by the end of this 
+course they should be 
+able to write simple C programs, e.g., calculator, time tracking system, etc. 
+The rationale was 
+to show a vision to excite them 
+for learning and instill the feeling of empowerment, by a narrative from
+being a consumer to being a developer of software programs.
+
+
+
+\subsection{Start with Why}
+One thing that I learnt by teaching for 3 years is that if you want a concept 
+to stick in someone's mind, then start with a \textit{why}\footnote{I learnt this idea by reading the book 
+\textit{Start With Why} by Simon Sinek.}. For example, when I introduced functions 
+in C programming course, I wanted to convey the need of functions. Therefore, I started the class by 
+asking them to write a code, using pen and paper, to compute the \textbf{factorial of a number $n$}. 
+Every one was comfortable with loops, so it was quick. I then asked them to write 
+another program that computes the \textbf{$k^{th}$ power of the factorial of $n$}. 
+In this assignment, some added an outer loop to cover the factorial computation, 
+and some added another loop after the factorial computation (stored the factorial 
+computation result and used it in later computation). 
+At this point, I asked the class 
+how one could write a program that computes the \textbf{factorial of 
+the $k^{th}$ power of the factorial of $n$}. The class slowly realised 
+that they needed to duplicate a lot of code. I then introduced functions 
+and showed them the solution of the previous problem by function composition.
+
+
+\subsection{Catching my Mistakes}
+To promote active participation, at the beginning of every class I would announce that 
+on a few occasions I would make deliberate mistakes in solving a problem, and the
+goal of the class was to catch me on the spot.
+If the class succeeded, they received  
+class participation marks, otherwise I told them my 
+mistake and no one received any marks. In every single 
+feedback that I got during my 3 years of teaching, 
+almost everyone appreciated this idea of making deliberate mistakes. 
+
+
+
+\subsection{Projects for Learning}
+For every course that I taught, I designed projects related to the concepts 
+and ideas present in the course. It was a part of my teaching philosophy to impart 
+critical thinking. Furthermore, I asked my students to come up with their own ideas to 
+promote idea-exploration, a key step to develop a critical thinking and problem solving mindset. 
+
+
+\section{Potential Courses}
+I feel qualified to teach most of the computer science courses 
+because of my background in computer science, but 
+my natural preference is the courses close to my research 
+area, e.g., theorem proving, cryptography, logic 
+and its applications in computer science, discrete 
+mathematics, algorithms and data structures, 
+introductory programming course (C/C++/Java/Python/Haskell/OCaml),
+foundation of computing, etc. 
+In addition, I would also like to design a course to teach 
+various voting methods used around the world and 
+their pros and cons from a social choice theory perspective. 
+Apart from these topics, I will 
+be more than happy to teach other courses, given enough 
+preparation time, at introductory and 
+intermediate levels, e.g., type theory, theory of programming 
+languages, networking, operating systems, databases, etc.
+
+
+\bibliography{research-statement-bibliography} 
+\bibliographystyle{unsrt}
+
+\end{document}
