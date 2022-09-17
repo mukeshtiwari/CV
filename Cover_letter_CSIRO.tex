@@ -1,0 +1,77 @@
+%basic cover letter template
+\documentclass{letter}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+
+\oddsidemargin=.2in
+\evensidemargin=.2in
+\textwidth=5.9in
+\topmargin=-.5in
+\textheight=9in
+
+%\address{Mathematics Department\\University of Illinois\\
+%1409 W. Green St\\Urbana, Illinois 61801}
+
+\newcommand {\qed}{\mbox{$\Box$}}
+\renewcommand {\iff}{\Longleftrightarrow}
+\newcommand {\R}{\mathbb{R}}
+\newcommand {\N}{\mathbb{N}}
+\newcommand {\Q}{\mathbb{Q}}
+\newcommand {\Z}{\mathbb{Z}}
+
+\newcommand {\sub}{\mbox{SB}}
+
+
+\begin{document}
+\begin{letter}{Search Committee\\
+CSIRO, Australia}
+
+
+\opening{Dear Search Committee,}
+
+
+I am writing to apply for the Research Scientist - Data Privacy and Confidentiality (67626). 
+I am currently working as a Research Fellow with Toby Murray in the School of Computing and Information Systems, University 
+of Melbourne, Melbourne. My research area is primarily focussed on formal verification of software program  which includes 
+electronic voting and cryptography. 
+
+As a Research Fellow at the University of Melbourne, I am investigating the 
+information flow security in weak memory model in the presence of concurrency with Toby Murray. 
+Verifying the correctness of functional programs without any side effect in a theorem prover 
+is not very difficult. Moreover, in most of cases, the proofs are simple pen-and-paper proof. 
+However, in case of side effects, the reasoning about the correctness of program is
+difficult, mainly in the context of heap manipulating programs, and this situation gets 
+more complicated in the presence of concurrency in weak-memory. 
+Our project is geared 
+towards a formal reasoning the information flow security in weak memory model and 
+the method we will develop will be applied to verify the security of seL4-based 
+software for critical embedded devices.  The project is still in nascent phase; however, 
+Toby and his team  has developed a software tool, SecC, to formally reason about information flow in 
+concurrent C programs.  I have used this tool to develop a formally verified  differentially private location server
+which masks the original location of a user without hampering the utility 
+and an auction server which does not leak any information classified as secret.  We are in the process 
+of submitting this paper to IEEES\&P.  
+
+During my PhD at the Australian National University, Canberra,  I addressed three main challenges of
+electronic voting: correctness, privacy, and verifiability.  I addressed correctness by implementing 
+the vote counting algorithm inside Coq theorem prover, privacy concern by using Homomorphic 
+encryption, and verifiablity concern by generating zero-knowledge-proofs for various claims.
+
+Finally, I feel that I am perfect fit for this role as my experience and skill set, formal verification, cryptography,  and program verification,
+would make me 
+a invaluable candidate for this position and to your research group because my expertise  in formal verification would help your 
+team in building a formally verified correct method,  very similar to the paper CheckDP published in CCS 2020 but more robust. 
+I appreciate your consideration
+and look forward to hearing for you.   Please contact me if you need any further information. 
+
+
+Mukesh Tiwari\\
+Research Fellow \\
+School of Computing and Information Systems\\
+University of Melbourne\\
+Melbourne, Victoria\\
+https://findanexpert.unimelb.edu.au/profile/860472-mukesh-tiwari\\
+\end{letter}
+
+\end{document}
+
