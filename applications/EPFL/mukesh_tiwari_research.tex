@@ -1,0 +1,240 @@
+\documentclass[a4paper]{article}
+\title{Research Statement}
+\author{Mukesh Tiwari}
+\date{}
+\usepackage{url}
+\setlength{\topmargin}{-10mm}
+\setlength{\textwidth}{7in}
+\setlength{\oddsidemargin}{-8mm}
+\setlength{\textheight}{9in}
+\setlength{\footskip}{1in}
+
+
+\begin{document}
+\fontsize{12}{15}
+\selectfont
+\maketitle
+
+Dear Hiring Committee, 
+
+I am writing to apply the job \textit{Faculty Positions in Computer and communications 
+Sciences}\footnote{\url{https://facultyrecruiting.epfl.ch/auth/Apply/0/Position/40599568/}}. My diverse skills --formal verification, electronic voting, cryptography, security,
+and social choice theory-- makes me an unique candidate for this position.  
+My work aims to build \textbf{correct software programs} used in a democratic processes 
+using the Coq theorem prover. In particular, I focus on formal verification of 
+software programs used 
+in elections (electronic voting), cryptography, and computational social choice theory. 
+
+In recent years, many entities of a government are using software programs 
+in critical decision making that impacts members of general public,  e.g., counting 
+(electronic) ballots to produce the winner of an election. However, if the
+software programs contain bugs, then it may produce a wrong 
+output, and therefore, government entities can lose its reputation. 
+In addition, it can also hamper the trust of  
+members of general public in government decision-making processes.
+Therefore, it is more imperative than ever  that  we formally verify these software programs 
+to make the government decision-making more trustworthy. 
+
+
+
+Fair elections are the only way to keep a democracy alive. Most countries (election commission) use paper ballots to record 
+its citizens' votes (preferences). Election commission then produces the final tally from these votes, 
+while many scrutineers --workers of the participating political parties and members of general 
+public in some countries, e.g., France-- observe the counting process. 
+These scrutineers and paper ballots, both, are crucial to ensure that 
+the election is free from fraud. Scrutineers keep the counting process transparent by making sure all the vote counting 
+rules are followed, while paper ballots ensure verifiability because in case of a dispute these paper ballots 
+can be counted again. Many countries, however, in recent years are introducing computers to conduct some part, or all, of 
+election processes because it is cost effective, accessible to disabled voters, faster result, convenient, etc. 
+In addition, some voting methods are very complex to count by hand, e.g., 
+single transferable vote, used in Australian senate elections, and it may take months to declare the final result if 
+counted by hand. Therefore, the Australian election commission scans all the ballots of a senate election and 
+uses a (closed source) software program to produce the final tally. In addition, several cantons in Switzerland use an electronic 
+voting system developed by Swiss Post, India uses electronic voting machines, various municipalities in France 
+use electronic voting machines, etc.
+
+\section{PhD Work}
+My PhD research was focused on verifying electronic voting, specifically vote-counting schemes, in 
+the Coq theorem prover. The goal was to 
+bring  three important ingredients, correctness, privacy, and (universal) verifiability, of a paper ballot election to 
+an electronic setting (electronic voting). In a paper ballot election, correctness is
+ensured by scrutineers, and privacy and verifiability  
+come for free because of secret paper ballots.  However, achieving these three desirable properties 
+are difficult in 
+electronic voting because software programs, used in 
+various stages of an election, work in a opaque (blackbox) manner. In this (electronic) setting, 
+a software program produces the final tally from the cast ballots without any human (scrutineers) involvement, 
+other than pressing some 
+buttons to run the software program. This opacity can cause harm of various level, including electing a 
+wrong winner that is not intended by the voters but because 
+of software bugs\footnote{A software bug elected a wrong winner: \url{https://www.areanews.com.au/story/3971893/mercuri-robbed/}}. Most of 
+these software programs used across the world by various nations to conduct elections for a public office 
+lacks quality measures \cite{10.1145/3014812.3014837, 9152765}. More importantly, these software programs are 
+treated as commercial in confidence and therefore,
+the members of general public are not allowed to inspect these software programs \cite{AEC:2013:LMM}.
+
+
+
+
+
+In my thesis, I demonstrated the correctness of a vote counting software program 
+by implementing the Schulze method and proving its correctness in Coq theorem 
+prover \cite{10.1007/978-3-319-66107-0_26}. 
+The Schulze method is a preferential (ranking) voting method where voters rank the participating 
+candidates according to their preferences. It is one of the most popular voting method amongst the open-source projects and 
+political groups\footnote{\url{https://en.wikipedia.org/wiki/Schulze_method#Users}}.
+While no preferential voting scheme can guarantee all
+desirable properties that one would like to impose due to Arrow's impossibility theorem \cite{arrow1950difficulty}, 
+the Schulze method offers a good compromise with a number of important properties established by economists, 
+social choice theorists, and political scientists.  In addition, my implementation 
+ensured (universal) verifiability by producing a scrutiny sheet 
+with the winner of an election. The scrutiny sheet contained all the data related 
+to the election, that could be used to audit the election independently. 
+The extracted OCaml code from this formalisation, however, was 
+very slow, so I wrote a fast implementation, that I proved equivalent to the slow one.
+The fast implementation was able to count millions of ballots \cite{bennett2017no}.
+In both formalisation, I assumed that (preferential) ballots were in plaintext, i.e., 
+ranking on every ballot was in a (plaintext) number.  Preferential ballots, 
+however, admit ``Italian'' attack \cite{Otten, Benaloh:2009:SSC}. 
+If the number of participating candidates are significantly high in 
+a preferential ballot election,
+then a ballot can be linked to a particular voter if published on a bulletin board.
+A coercer demands the voter to mark them as first and for the rest of candidates
+in a certain permutation. Later, the coercer checks if that permutation appears 
+on the bulletin board or not. In order to
+avoid this attack on the Schulze method, I used homomorphic encryption to count the (encrypted) ballots, without decrypting 
+any individual ballot. Moreover, I addressed verifiability by generating a scrutiny sheet (certificate) 
+augmented with zero-knowledge-proofs for various claims, e.g., honest decryption, honest shuffle,  
+during the counting \cite{10.1007/978-3-030-41600-3_4}. 
+Finally, I wanted to develop to formally 
+verified scrutiny sheet checker for encrypted ballots Schulze election, but due to the lack of 
+time\footnote{PhD duration is 3.5 years in Australia} I worked on a scrutiny sheet checker for a simple approval voting election,
+International Association of Cryptologic Research (IACR) election \cite{10.1145/3319535.3354247}.
+In addition, I was involved in formalisation of single transferable vote, used in the Australian Senate
+\cite{10.1007/978-3-030-00419-4_4}.
+
+
+
+
+\section{Current Work at Cambridge and Previous Work at Melbourne}
+Currently, I am working as a postdoctoral researcher at the university of Cambridge. 
+In my current project \emph{Combinators for Algebraic Structures}\footnote{\url{https://www.cl.cam.ac.uk/~tgg22/CAS/}}, 
+I am formalising various graph algorithms on \emph{semiring} algebraic 
+structure and combinators (functions) to 
+combine two, or more, algebraic structures. In this work, I am developing 
+a mathematical correct-by-construction \cite{10.1007/978-3-319-66107-0_26} 
+framework, in Coq thereom prover, based on theory of routing algebra 
+\cite{10.1093/imamat/15.2.161, 10.1145/1080091.1080094}. The goal is to alleviate network-engineers from 
+proving the correctness of their protocol and allow them to focus entirely on protocol design.
+All they need to do is express their protocol in our
+framework, and it will tell what properties the protocol follows and what it does not. 
+In addition, this framework can be used in operation
+research, given that its underlying principles are 
+very similar to protocol design.
+
+
+
+At the university of Melbourne, I worked on 
+security concurrent separation logic for formally reasoning about the information flow in concurrent programs. 
+I used SecureC, a tool developed at the university of Melbourne, to formalise an email server, 
+an auction server, and a location server. All these works were proven to leak no sensitive 
+information to attackers, assuming that the compiler respects all assumption\footnote{under submission}. 
+In addition, I developed a information flow secure gradient descent algorithm in SecureC for 
+trusted execution environment, e.g., Intel SGX and ARM TrustZone. This work has been 
+informally presented at PaveTrust
+\footnote{\url{https://www.acsac.org/2021/workshops/pavetrust/PAVeTrust-Program.pdf}}.
+
+
+\section{Future Work}
+My long-term aim is to make formal verification accessible and ubiquitous in 
+software development, specifically for the software programs deployed in public domain
+that affect common people.
+My expertise in \textbf{Theorem Proving, Cryptography, and Election Security}
+gives me an unique perspective to solve challenging problems that matter to many democracies 
+and its citizens. In future, I will:
+
+\begin{itemize}
+
+
+
+\item focus on formally verified cryptographic primitives used in electronic voting, 
+  Internet of Things (IoT), and blockchain, e.g., 
+	sigma protocols (zero-knowledge-proof), verifiable (shuffling) mix-networks, 
+	multi-party computations, secret sharing, secure communication, zk-snark, etc. 
+	In some of my projects, I have formalised
+	cryptographic primitives but ended up extracting OCaml 
+	code\footnote{We can extract OCaml/Haskell/Scheme 
+	code from Coq formalisation.} and used OCaml compiler to 
+	compile the code to machine level. However, OCaml compiler is not proven correct 
+	and therefore it may introduce new bugs in the compiled code. The challenging part 
+	of this project will be to compile a formalised Coq cryptographic 
+	code to an assembly code. It is highly non-trivial, but it opens the door of 
+	collaboration with other research group working in verified compilation.
+
+\item focus on developing formally verified (electronic) voting 
+software (components) programs in Coq theorem prover. 
+The rationale is that once we have formally verified 
+components, anyone --election commission or members of general public-- can use them 
+to conduct elections, referendums, and verify elections' outcome.
+It will be interesting to design and implement electronic voting components  
+for vote counting methods such as \textit{Single Transferable Vote (STV), 
+First Past the Post (FPTP), Instant-runoff, etc.} on encrypted ballots. These 
+voting methods differ from each other so producing final tally from encrypted 
+ballot will be a challenging task, while ensuring correctness, privacy, and 
+verifiability. The outcome of this project can be used by election commissions and citizens of 
+the countries that are using software programs to conduct elections, e.g.,
+Australia, Switzerland, Canada, France, etc. 
+
+\item focus on formally verified decentralised peer-to-peer technical solution, inspired by 
+\cite{liu2004linkable, Clarke2001, schimmer2009peer}, in Coq theorem prover which will help 
+whistleblowers in leaking documents and exposing corruption without revealing their identity. 
+Being vocal against the government is one the most fundamental right of any citizen, but many 
+authoritative governments do not appreciate dissent of any form. Therefore, it uses 
+its powerful machinery to punish the dissident, in the name of national security. 
+For example, David McBridge\footnote{\url{https://en.wikipedia.org/wiki/David_McBride_(whistleblower)}}, 
+a former Australian Defence Force lawyer,  
+is facing a threat of lifetime jail after
+leaking the material alleging war crimes by members of the Australia's Special Operations
+Task Group in Afghanistan (Australia is ranked very high in 
+democracy index\footnote{\url{https://worldpopulationreview.com/country-rankings/democracy-countries}}). 
+This research will open the door of collaboration with many groups working in verified 
+networking, and verified distributed systems. 
+
+\item focus on formally verified (computational) social choice theory in Coq theorem prover. 
+	Voting methods admit many properties established by political scientists, social choice theorists, 
+	and economists. For example, the Schulze method follows Condorcet criterion, reversal symmetry,
+	polynomial runtime, etc., so when we formalise the Schulze method, or in fact any vote-counting method, 
+	we can push the boundary of correctness by proving that our 
+	implementation of the Schulze method also follows all the properties \cite{tiwari2021machine}. 
+	In addition, we can also analyse these voting
+	methods from computational complexity point of view whether by a certain amount of bribing
+	voters a specified candidate can be made the election's winner \cite{faliszewski2006complexity},
+	also by formalising them in the Coq theorem prover. 
+	This research opens the door of collaboration with political scientists, 
+	social choice theorists, economists, and game theorists.
+
+\item focus on formally verified combinators for algebraic structure (CAS) in Coq theorem prover. 
+	Currently, CAS formalisation is highly focused on networking protocols, but it can be 
+	adapted for other areas, e.g., optimisation, clustering, algebraic program 
+	analysis, etc. In the CAS, we use an abstract algebraic structure 
+	\emph{semiring} as an underlying structure
+	for computation and and we model various algorithm at the top this 
+	structure. In this setting, an algorithm can compute different values depending 
+	on the concrete structure of semiring, e.g., the same algorithm 
+	can compute shortest path, longest paths, 
+	data flow of imperative programs, and many more \cite{gondran2008graphs} 
+	for an appropriate semiring.
+	
+
+\end{itemize}
+
+My lab will be a very diverse place where students and researchers from formal 
+verification, cryptography, 
+political science, social science, social choice theory will interact, discuss, 
+collaborate on the ideas that matters to democracies and societies.
+
+
+\bibliography{research-statement-bibliography} 
+\bibliographystyle{unsrt}
+
+\end{document}
