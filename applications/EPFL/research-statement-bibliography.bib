@@ -26,7 +26,7 @@
 @INPROCEEDINGS{9152765,
   author={Haines, Thomas and Lewis, Sarah Jamie and Pereira, Olivier and Teague, Vanessa},
   booktitle={2020 IEEE Symposium on Security and Privacy (SP)}, 
-  title={{How not to prove your election outcome}}, 
+  title={{How Not to Prove Your Election Outcome}}, 
   year={2020},
   volume={},
   number={},
@@ -142,6 +142,27 @@ url="https://doi.org/10.1007/3-540-44702-4_4"
   pages={1--18},
   year={2016}
 }
+
+
+@inproceedings{10.1145/1866307.1866346,
+author = {Corrigan-Gibbs, Henry and Ford, Bryan},
+title = {Dissent: Accountable Anonymous Group Messaging},
+year = {2010},
+isbn = {9781450302456},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1866307.1866346},
+doi = {10.1145/1866307.1866346},
+abstract = {Users often wish to participate in online groups anonymously, but misbehaving users may abuse this anonymity to disrupt the group's communication. Existing messaging protocols such as DC-nets leave groups vulnerable to denial-of-service and Sybil attacks, Mix-nets are difficult to protect against traffic analysis, and accountable voting protocols are unsuited to general anonymous messaging.We present the first general messaging protocol that offers provable anonymity with accountability for moderate-size groups, and efficiently handles unbalanced loads where few members wish to transmit in a given round. The N group members first cooperatively shuffle an N x N matrix of pseudorandom seeds, then use these seeds in N "pre-planned" DC-nets protocol runs. Each DC-nets run transmits the variable-length bulk data comprising one member's message, using the minimum number of bits required for anonymity under our attack model. The protocol preserves message integrity and one-to-one correspondence between members and messages, makes denial-of-service attacks by members traceable to the culprit, and efficiently handles large, unbalanced message loads. A working prototype demonstrates the protocol's practicality for anonymous messaging in groups of 40+ members.},
+booktitle = {Proceedings of the 17th ACM Conference on Computer and Communications Security},
+pages = {340–350},
+numpages = {11},
+keywords = {group communication, denial of service, verifiable anonymous shuffle, peer-to-peer networks, accountability, anonymity},
+location = {Chicago, Illinois, USA},
+series = {CCS '10}
+}
+
+  
 
 
 @InProceedings{10.1007/978-3-030-81685-8_3,
