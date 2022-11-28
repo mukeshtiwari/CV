@@ -31,7 +31,7 @@ single transferable vote used in Australian senate elections, and it may take mo
 a senate election if 
 counted by hand. Therefore, the Australian Election Commission scans all the ballots of the senate election and 
 uses a (closed source) software program to produce the final tally. Moreover, several cantons in Switzerland use an electronic 
-voting system developed by Swiss Post, India uses electronic voting machines, various municipalities in France 
+voting system developed by SwissPost, India uses electronic voting machines, various municipalities in France 
 use electronic voting machines, etc.  Nonetheless, there is a growing debate about using electronic voting machines (computers)
 because of software bugs leading unintended consequences. For example, Rina Mercuri, 
 a candidate in Australia, lost an election because of 
@@ -110,38 +110,6 @@ In addition, I was involved in the formalisation of single transferable vote, us
 \cite{10.1007/978-3-030-00419-4_4}.
 
 
-\section{Current Work at Cambridge and Previous Work at Melbourne}
-Currently, I am working as a postdoctoral researcher at the university of Cambridge. 
-In my current project \emph{Combinators for Algebraic Structures}\footnote{\url{https://www.cl.cam.ac.uk/~tgg22/CAS/}}, 
-I am formalising various graph algorithms on \emph{semiring} algebraic 
-structure and combinators (functions) to 
-combine two, or more, algebraic structures. In this work, I am developing 
-a mathematical correct-by-construction \cite{10.1007/978-3-319-66107-0_26} 
-framework, in Coq thereom prover, based on theory of generalised 
-path-finding algebra \cite{10.1093/imamat/15.2.161, 10.1145/1080091.1080094}. 
-In our framework, depending on concrete instantiation 
-of semiring operators, the same algorithm can compute shortest path, longest paths, 
-widest paths, etc. In fact, the Schulze method is one instance of our framework. 
-In addition, this framework can be used in operation
-research, given that its underlying principles are graph algorithms. 
-
-
-At the university of Melbourne, my work was focussed on constant-time implementations, 
-a key requirement for many applications including cryptography. 
-In particular, I worked on security concurrent separation logic for formally reasoning about 
-the information flow properties of a concurrent program. 
-I used SecureC, a tool developed at the university of Melbourne, to formalise an email server, 
-an auction server, and a location server. 
-In addition, I developed a information flow secure gradient descent algorithm (a machine learning 
-algorithm) in SecureC for 
-trusted execution environment, e.g., Intel SGX and ARM TrustZone to process highly sensitive 
-data such as parents' income, race, gender, incarceration time, etc\footnote{https://opportunityinsights.org/}.
-This work has been informally presented at PaveTrust workshop\footnote{\url{shorturl.at/hlPQ5}}.
-All these works were mathematically proven to leak no sensitive 
-information to an attacker\footnote{under submission} observing the execution of a program processing 
-some secret data.
-
-
 \section{Future Work}
 My long-term aim is to make formal verification accessible and ubiquitous in 
 software development, specifically for the software programs deployed in public domain
@@ -162,6 +130,7 @@ and its citizens.
 	behind this project is to replace the SwissPost Java implementations\footnote{\url{shorturl.at/hJOPU}} 
 	with mathematically proven correct Coq 
 	implementations\footnote{An ongoing project \url{https://github.com/mukeshtiwari/Dlog-zkp/}}.
+
 	
 
 	
@@ -171,37 +140,36 @@ In future, I will focus on developing mathematically proven correct
 software programs for vote-counting methods used across the world
 such as \textit{Single Transferable Vote (STV), 
 First Past the Post (FPTP), Instant-runoff voting(IRV), etc.,} in the Coq theorem prover. 
-The rationale is that once we have  mathematically proven correct 
+All the vote-counting methods, by design, lend themselves well to computing the 
+winner from plaintext ballots; however, so far there is very little research in computing 
+the winner from encrypted ballots, while ensuring correctness, privacy, and 
+verifiability. Therefore, producing the winner from encrypted 
+ballots is a challenging task. The cryptographic algorithms formalised in 
+the previous step are going to be used as a building block in this project.
+The motivation for this project is that once we have  mathematically proven correct 
 components, anyone --election commission or members of general public-- can use them 
 to conduct elections, referendums, and verify elections' outcome 
-without worrying about software bugs. The interesting and challenging part 
-of this project will be to come up with a method to compute final 
-tally on encrypted ballots 
+without worrying about software bugs. 
 
 
-The most challenging part for 
-this project will be implementing software programs  
-for vote-counting methods such as \textit{Single Transferable Vote (STV), 
-First Past the Post (FPTP), Instant-runoff, etc.} on encrypted ballots. Given that 
-these voting methods differ from each other, there is no uniform way to compute 
-final tally from encrypted ballots. Therefore, producing the final tally from encrypted 
-ballots will be a challenging task, while ensuring correctness, privacy, and 
-verifiability. The outcome of this project can be used by election commissions and citizens of 
-the countries that are using software programs to conduct elections, e.g.,
-Australia, Switzerland, Canada, France, etc. 
+
+ 
 
 \subsection{Mathematically Proven Correct Decentralised Application}
-I will focus on formally verified decentralised peer-to-peer technical solution, inspired by 
-\cite{liu2004linkable, Clarke2001, schimmer2009peer, 10.1145/1866307.1866346}, in the Coq theorem prover which will help 
+I will focus on a mathematically proven correct decentralised peer-to-peer technical solution 
+\cite{liu2004linkable, Clarke2001, schimmer2009peer, 10.1145/1866307.1866346} in the Coq theorem prover that will help 
 whistleblowers in leaking documents and exposing corruption without revealing their identities.
 Being vocal against the government is one the most fundamental right of any citizen, but many 
 authoritative governments do not appreciate dissent of any form. Therefore, it uses 
-its powerful machinery to punish the dissident, in the name of national security. 
-For example, David McBridge\footnote{\url{https://en.wikipedia.org/wiki/David_McBride_(whistleblower)}}, 
-a former Australian Defence Force lawyer,  
+its powerful machinery to punish dissidents, in the name of national security. 
+The inspiration for this project comes from David McBridge\footnote{\url{https://en.wikipedia.org/wiki/David_McBride_(whistleblower)}} and 
+Richard Boyle\footnote{\url{https://www.smh.com.au/politics/federal/whistleblower-facing-161-years-in-jail-had-his-claims-rejected-by-ato-20190228-p510wi.html}}.
+David McBride 
 is facing a threat of lifetime jail after
 leaking the material alleging war crimes by members of the Australia's Special Operations
-Task Group in Afghanistan (Australia is ranked very high in 
+Task Group in Afghanistan, while Richard Boyle is facing 161 years for exposing the corruption 
+inside the Australian Taxation office
+(Australia is ranked very high in 
 democracy index\footnote{\url{https://worldpopulationreview.com/country-rankings/democracy-countries}}). 
 This research will open the door of collaboration with many groups working in verified 
 networking, and verified distributed systems. 
@@ -214,25 +182,44 @@ polynomial runtime, etc., so when we formalise the Schulze method, or in fact an
 we can push the boundary of correctness by proving that our 
 implementation of the Schulze method also follows all the properties \cite{tiwari2021machine}. 
 In addition, we can analyse these voting
-methods from computational complexity point of view by if a certain amount of bribing
+methods from computational complexity perspective of bribery, if a certain amount of bribing
 voters a specified candidate can be made an election's winner \cite{faliszewski2006complexity}. 
 This research opens the door of collaboration with political scientists, 
 social choice theorists, economists, and game theorists.
 
-\subsection{Mathematically Proven Correct Combinators for Algebraic Structure}
-I will focus on formally verified combinators for algebraic structure (CAS) in the Coq theorem prover. 
-Currently, CAS formalisation is highly focused on networking protocols, but it can be 
-adapted for other areas, e.g., optimisation, clustering, algebraic program 
-analysis, etc. In the CAS, we use an abstract algebraic structure 
-\emph{semiring} as an underlying structure
-for computation and we model various algorithm at the top this 
-structure. In this setting, an algorithm can compute different values depending 
-on the concrete structure of semiring, e.g., the same algorithm 
-can compute shortest path, longest paths, 
-data flow of imperative programs, and many more \cite{gondran2008graphs} 
-for an appropriate semiring.
 
 
+\section{Current Work at Cambridge and Previous Work at Melbourne} 
+In my current project \emph{Combinators for Algebraic Structures}\footnote{\url{https://www.cl.cam.ac.uk/~tgg22/CAS/}}, 
+I am formalising various graph algorithms on \emph{semiring} algebraic 
+structure and combinators (functions) to 
+combine two, or more, algebraic structures. In this work, I am developing 
+a mathematical correct-by-construction \cite{10.1007/978-3-319-66107-0_26} 
+framework, in Coq thereom prover, based on theory of generalised 
+path-finding algebra \cite{10.1093/imamat/15.2.161, 10.1145/1080091.1080094}. 
+In our framework, depending on concrete instantiation 
+of semiring operators, the same algorithm can compute shortest path, longest paths, 
+widest paths, multi-objective optimisation, data flow of imperative programs, and many more \cite{gondran2008graphs}. 
+In fact, the Schulze method is one instance of our framework. However, 
+the current CAS implementation is highly focused towards networking protocols,
+so as a future work I will focus on adding more algorithms in CAS related 
+to multi-objective optimisation, data flow analysis of imperative programs, and voting. 
+
+
+At the university of Melbourne, my work was focussed on constant-time implementations, 
+a key requirement for many applications including cryptography. 
+In particular, I worked on security concurrent separation logic for formally reasoning about 
+the information flow properties of a concurrent program. 
+I used SecureC, a tool developed at the university of Melbourne, to formalise an email server, 
+an auction server, and a location server. 
+In addition, I developed a information flow secure gradient descent algorithm (a machine learning 
+algorithm) in SecureC for 
+trusted execution environment, e.g., Intel SGX and ARM TrustZone to process highly sensitive 
+data such as parents' income, race, gender, incarceration time, etc\footnote{https://opportunityinsights.org/}.
+This work has been informally presented at PaveTrust workshop\footnote{\url{shorturl.at/hlPQ5}}.
+All these works were mathematically proven to leak no sensitive 
+information to an attacker\footnote{under submission} observing the execution of a program processing 
+some secret data.
 
 My lab will be a very diverse place where students and researchers from formal 
 verification, cryptography, 
