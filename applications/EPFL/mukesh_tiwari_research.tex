@@ -144,12 +144,12 @@ All the vote-counting methods, by design, lend themselves well to computing the
 winner from plaintext ballots; however, so far there is very little research in computing 
 the winner from encrypted ballots, while ensuring correctness, privacy, and 
 verifiability. Therefore, producing the winner from encrypted 
-ballots is a challenging task. The cryptographic algorithms formalised in 
-the previous step are going to be used as a building block in this project.
+ballots is a challenging task.
 The motivation for this project is that once we have  mathematically proven correct 
 components, anyone --election commission or members of general public-- can use them 
 to conduct elections, referendums, and verify elections' outcome 
-without worrying about software bugs. 
+without worrying about software bugs.  The cryptographic algorithms formalised in 
+the previous step are going to be used as a building block in this project.
 
 
 
@@ -157,7 +157,8 @@ without worrying about software bugs.
 
 \subsection{Mathematically Proven Correct Decentralised Application}
 I will focus on a mathematically proven correct decentralised peer-to-peer technical solution 
-\cite{liu2004linkable, Clarke2001, schimmer2009peer, 10.1145/1866307.1866346} in the Coq theorem prover that will help 
+\cite{liu2004linkable, Clarke2001, schimmer2009peer, 10.1145/1866307.1866346} in the Coq theorem prover. The motivation 
+is to help 
 whistleblowers in leaking documents and exposing corruption without revealing their identities.
 Being vocal against the government is one the most fundamental right of any citizen, but many 
 authoritative governments do not appreciate dissent of any form. Therefore, it uses 
@@ -175,14 +176,21 @@ This research will open the door of collaboration with many groups working in ve
 networking, and verified distributed systems. 
 
 \subsection{Mathematically Proven Correct Social Choice Properties}
-I will focus on formally verified (computational) social choice theory in the Coq theorem prover. 
-Voting methods admit many properties established by political scientists, social choice theorists, 
+Computational social choice theory is a research area that is concerned
+with aggregation of ballots (preferences)  of multiple voters (agents) and encompasses 
+computer science, mathematics, economics, and political science. Typical applications of 
+computational social choice theory is voting (preference aggregation), resource allocation, and fair division.
+Most of the proofs in computational social choice theory are pen-and-paper proofs, 
+and one of my long term future research goal is to make them more precise using the Coq theorem prover.
+
+My current focus is voting because voting methods admit many excellent properties
+established by political scientists, social choice theorists, 
 and economists. For example, the Schulze method follows Condorcet criterion, reversal symmetry,
 polynomial runtime, etc., so when we formalise the Schulze method, or in fact any vote-counting method, 
 we can push the boundary of correctness by proving that our 
 implementation of the Schulze method also follows all the properties \cite{tiwari2021machine}. 
 In addition, we can analyse these voting
-methods from computational complexity perspective of bribery, if a certain amount of bribing
+methods from computational complexity perspective of bribery, if by bribing a certain amount 
 voters a specified candidate can be made an election's winner \cite{faliszewski2006complexity}. 
 This research opens the door of collaboration with political scientists, 
 social choice theorists, economists, and game theorists.
@@ -218,10 +226,10 @@ trusted execution environment, e.g., Intel SGX and ARM TrustZone to process high
 data such as parents' income, race, gender, incarceration time, etc\footnote{https://opportunityinsights.org/}.
 This work has been informally presented at PaveTrust workshop\footnote{\url{shorturl.at/hlPQ5}}.
 All these works were mathematically proven to leak no sensitive 
-information to an attacker\footnote{under submission} observing the execution of a program processing 
+information to an attacker observing the execution of a program processing 
 some secret data.
 
-My lab will be a very diverse place where students and researchers from formal 
+My lab will be a diverse place where students and researchers from formal 
 verification, cryptography, 
 political science, social choice theory will interact, discuss, 
 collaborate on the ideas that matters to democracies and societies.
