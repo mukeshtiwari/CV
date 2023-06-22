@@ -1,0 +1,138 @@
+\documentclass[a4paper]{article}
+\title{Research Statement}
+\author{Mukesh Tiwari}
+\date{}
+\usepackage{url}
+\setlength{\topmargin}{-10mm}
+\setlength{\textwidth}{7in}
+\setlength{\oddsidemargin}{-8mm}
+\setlength{\textheight}{9in}
+\setlength{\footskip}{1in}
+
+
+\begin{document}
+\fontsize{12}{15}
+\selectfont
+\maketitle
+
+
+My research interests lie in constructing correct software programs used in a democratic process, e.g., 
+voting. During my PhD, I worked on formal verification of the Schulze method 
+--a preferential vote-counting method-- \cite{10.1007/978-3-319-66107-0_26, bennett2017no} in the Coq theorem prover. 
+In my Coq implementation, I assumed that (preferential) ballots were in plaintext, but preferential ballots 
+admit ``Italian'' attack \cite{Otten, Benaloh:2009:SSC}. 
+Although my previous two Coq implementations \cite{10.1007/978-3-319-66107-0_26, bennett2017no} 
+satisfied correctness and verifiability criteria, they lacked privacy due to ``Italian'' attack. 
+Therefore, to avoid the ``Italian'' attack on the Schulze method, I used a homomorphic encryption 
+to encrypt the ballots and computed the winner by combining all the 
+(encrypted) ballots, without decrypting any individual ballot (privacy) \cite{10.1007/978-3-030-41600-3_4}.
+The downside of an encrypted ballot Schulze election, 
+or in fact any encrypted ballot election, is difficulty in auditing because of involved 
+mathematics of cryptography. Therefore, in the future I want to explore the possibility of a 
+verified prototype of scrutiny-sheet checker for encrypted ballots Schulze elections.
+Finally, I worked on a verified prototype of a simple approval voting election scrutiny-sheet checker for
+International Association of Cryptologic Research (IACR) \cite{10.1145/3319535.3354247}. 
+In addition, I was involved in the formalisation of single transferable vote, used in the Australian Senate
+\cite{10.1007/978-3-030-00419-4_4}.
+
+My long-term aim is to make formal verification ubiquitous in 
+software development, specifically for the software programs deployed in public domain
+that affect common people.
+My expertise in \textbf{Theorem Proving, Cryptography, and Election Security}
+gives me an unique perspective to solve challenging problems that matter to many democracies 
+and its citizens. 
+
+\section{Research Integration Project}
+	Throughout my research career, I have secured softwares by proving them 
+	mathematically correct using the Coq theorem prover, and 
+	at CentraleSup\'elec (Rennes campus) I would like to use my formal 
+	verification expertise to strengthen the capability of \textbf{CIDRE} team in 
+	formal methods for security. For example, I can be contribute to 
+	the ongoing formal verification projects, e.g., FreeSpec, etc. 
+	In addition, I am open to explore other areas of security, e.g.,
+	network security, malware analyses, embedded system security, etc.
+	
+
+
+\section{Future Work}
+	In addition to contributing to the existing projects at \textbf{CIDRE}, 
+	I would like to work on following projects to add more capability 
+	at \textbf{CIDRE} and forge research collaboration with other 
+	research groups in France and worldwide.
+
+\subsection{Mathematically Proven Correct Cryptographic Algorithms}
+	Cryptographic algorithms are used ubiquitously to secure 
+	the data, and correctness is an utmost requirement for 
+	any cryptographic algorithm implementation. Therefore, 
+	I will focus on developing mathematically proven correct cryptographic 
+	algorithms used in electronic voting, blockchain, and secure communication, e.g., 
+  	sigma protocols (zero-knowledge-proof), verifiable (shuffling) mix-networks, 
+  	multi-party computations, secret sharing, zk-snark, etc.
+	The rationale behind implementing these algorithms is that anyone can use them to construct 
+	an utility, e.g., an election scrutiny-sheet checker, 
+	a vote-tallying system based on blockchain,
+	a verifiable ballot mixing service, an auction server, etc. One of the motivation
+	behind this project is to replace the SwissPost Java implementations\footnote{\url{https://bit.ly/3EODmnF}} 
+	with mathematically proven correct Coq 
+	implementations\footnote{An ongoing project \url{https://github.com/mukeshtiwari/Dlog-zkp/}}.
+
+	
+
+	
+
+\subsection{Mathematically Proven Correct Vote-Counting Algorithms}
+In future, I will focus on developing mathematically proven correct
+software programs for vote-counting methods used across the world
+such as \textit{Single Transferable Vote (STV), 
+First Past the Post (FPTP), Instant-runoff voting(IRV), etc.,} in the Coq theorem prover. 
+All the vote-counting methods, by design, lend themselves well to computing the 
+winner from plaintext ballots; however, so far there is very little research in computing 
+the winner from encrypted ballots, while ensuring correctness, privacy, and 
+verifiability. Therefore, producing the winner from encrypted 
+ballots is a challenging task.
+The motivation for this project is that once we have  mathematically proven correct 
+components, anyone --election commission or members of general public-- can use them 
+to conduct elections, referendums, and verify elections' outcome 
+without worrying about software bugs.  The cryptographic algorithms formalised in 
+the previous step are going to be used as a building block in this project.
+
+
+
+ 
+
+\subsection{Mathematically Proven Correct Decentralised Application}
+I will focus on a mathematically proven correct decentralised peer-to-peer technical solution 
+\cite{liu2004linkable, Clarke2001, schimmer2009peer, 10.1145/1866307.1866346} in the Coq theorem prover. The motivation 
+is to help 
+whistleblowers in leaking documents and exposing corruption without revealing their identities.
+Being vocal against the government is one the most fundamental right of any citizen, but many 
+authoritative governments do not appreciate dissent of any form. Therefore, it uses 
+its powerful machinery to punish dissidents, in the name of national security. 
+The inspiration for this project comes from David McBridge\footnote{\url{https://en.wikipedia.org/wiki/David_McBride_(whistleblower)}} and 
+Richard Boyle\footnote{\url{https://bit.ly/3OQ6kbC}}.
+David McBride 
+is facing a threat of lifetime jail after
+leaking the material alleging war crimes by members of the Australia's Special Operations
+Task Group in Afghanistan, while Richard Boyle is facing 161 years for exposing the corruption 
+inside the Australian Taxation office
+(Australia is ranked very high in 
+democracy index\footnote{\url{https://worldpopulationreview.com/country-rankings/democracy-countries}}). 
+This research will open the door of collaboration with many groups working in verified 
+networking, and verified distributed systems. 
+
+\subsection{Mathematically Proven Correct Social Choice Properties}
+Computational social choice theory is a research area that is concerned
+with aggregation of ballots (preferences)  of multiple voters (agents) and encompasses 
+computer science, mathematics, economics, and political science. Typical applications of 
+computational social choice theory is voting (preference aggregation), resource allocation, and fair division.
+Most of the proofs in computational social choice theory are pen-and-paper proofs, 
+and one of my long term future research goal is to make them more precise using the Coq theorem prover \cite{tiwari2021machine}.
+Moreover, I would also focus on designing voting algorithms.
+This research opens the door of collaboration with political scientists, 
+social choice theorists, economists, and game theorists.
+
+
+\bibliography{research-statement-bibliography} 
+\bibliographystyle{unsrt}
+
+\end{document}

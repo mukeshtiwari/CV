@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Mathematically_Proven_Correct_and_Verifiable_Counting.aux
+The style file: unsrt.bst
+Database file #1: reference.bib
+Warning--entry type for "the_coq_development_team_2019_3476303" isn't style-file defined
+--line 144 of file reference.bib
+Warning--empty booktitle in 10.1145/3133956.3134078
+Warning--empty year in 10.1145/3133956.3134078
+You've used 23 entries,
+            1791 wiz_defined-function locations,
+            605 strings with 8989 characters,
+and the built_in function-call counts, 7276 in all, are:
+= -- 656
+> -- 342
+< -- 14
++ -- 120
+- -- 97
+* -- 501
+:= -- 1070
+add.period$ -- 75
+call.type$ -- 23
+change.case$ -- 23
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 344
+empty$ -- 680
+format.name$ -- 97
+if$ -- 1706
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 21
+newline$ -- 115
+num.names$ -- 33
+pop$ -- 88
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 215
+stack$ -- 0
+substring$ -- 494
+swap$ -- 138
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 69
+width$ -- 25
+write$ -- 265
+(There were 3 warnings)

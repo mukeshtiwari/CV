@@ -1,0 +1,126 @@
+
+
+
+
+%Author by Rajib Das Bhagat (rajibdasbhagat@gmail.com)
+%
+\documentclass[11pt,a4paper,roman]{moderncv}      
+\usepackage[english]{babel}
+
+\moderncvstyle{classic}                            
+\moderncvcolor{black}                            
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+% adjust the page margins
+\usepackage[scale=0.90]{geometry}
+
+% personal data
+\name{Mukesh Tiwari}{}
+\email{mt883@cam.ac.uk}
+\phone[mobile]{+447824648138}               
+\address{Cambridge, United Kingdom}
+
+
+\begin{document}
+
+\recipient{To}{The Hiring Committee, \\
+University of Michigan-Dearborn, USA}
+\date{}
+\opening{\textbf{Application for the Faculty  job}}
+\closing{Your Sincerly, \vspace{-1em}}
+
+
+
+\makelettertitle
+
+Dear Hiring Committee, 
+
+I am writing to apply
+for the \textbf{Faculty} job. 
+I have extensive research experience in
+theorem proving (Coq theorem prover), (election) software security, cryptography,  
+and social choice theory. My research is highly relevant to a democracy that conducts 
+an election using software programs. I have developed many 
+formally verified (mathematically proven correct)
+solutions that address the problems, pointed by researchers, 
+of e-voting software programs. 
+For example, I have developed a formally verified independently 
+verifiable group generator to bootstrap elections, a formally verified 
+scrutiny sheet checker for Swiss elections, replacing the SwissPost Java 
+cryptographic implementation by a formally verified Coq implementation and proofs,  
+formally verified the Schulze method, etc.
+I have a PhD from the Australian National University, Canberra, Australia,
+and currently, I am working as a senior Research Fellow at the University of 
+Cambridge. Before moving to Cambridge, I was a 
+research fellow at the University of Melbourne, Australia.
+
+
+
+The goal of my PhD was to 
+bring  three important ingredients, correctness, privacy, and (universal) verifiability, of a 
+paper ballot election to an electronic setting (electronic voting). I 
+demonstrated: (i) correctness by implementing and proving the correctness of 
+a vote-counting algorithm, the Schulze method, in the Coq theorem prover, 
+(ii) privacy by using homomorphic encryption to encrypt the ballots and computed
+the winner by combining all the (encrypted) ballots, and 
+(iii) verifiability by means of various zero-knowledge-proofs.
+At Michigan, as an assistant professor, 
+I would like to expand my research area into other areas of 
+security and formal verification, e.g., domain specific language to reason about 
+functional correctness and security properties --from computational complexity perspective-- of 
+cryptographic algorithms, anonymous communication, blockchain, zk-snark,  
+information flow security, computational complexity of social choice methods, 
+etc. My research has been published in Interactive Theorem Proving (ITP), 
+Computer and Communications Security (CCS), Electronic Voting (EVote), 
+International Conference on Cryptology in India (IndoCrypt),
+and some (finished) works have been submitted to USENIX and SIGCOMM. 
+All my research work has been formalised in the Coq theorem prover. 
+
+\vspace{0.5cm}
+In my current project \emph{Combinators for Algebraic Structures (CAS)},
+I am formalising various graph algorithms on \emph{semiring} algebraic structures 
+and combinators (functions) to 
+combine two, or more, algebraic structures. In this work, I am developing 
+a mathematical correct-by-construction  
+framework, in Coq theorem prover, based on theory of generalised path-finding algebra. 
+In our framework, depending on concrete instantiation 
+of semiring operators, the same algorithm can compute shortest path, longest paths, 
+widest paths, multi-objective optimisation, data flow of imperative programs, and many more. 
+In fact, the Schulze method is one instance of our framework. However, 
+the current CAS implementation is highly focused towards networking protocols,
+so as a future work I will focus on adding more algorithms in CAS related 
+to multi-objective optimisation, data flow analysis of imperative programs, and voting. 
+
+
+As a research associate at the University of Melbourne, I have spearheaded three projects:
+ (i) a formally verified auction server, (ii) a formally
+ verified location server, and (iii) a formally verified machine learning 
+ algorithm that is resistant to side-channel attacks and can  
+ run inside the Intel SGX (Software Guard Extensions) enclave for learning
+ on sensitive data. All three implementations have been proven 
+ memory safe (using separation logic) and free from information
+ leaks using the SecureC tool, a tool developed at the University of Melbourne.
+
+I look forward to hearing from you. Please let me know if you have any questions. \\
+ 
+
+\vspace{0.5cm}
+
+
+\makeletterclosing
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

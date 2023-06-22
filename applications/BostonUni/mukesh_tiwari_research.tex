@@ -1,0 +1,252 @@
+\documentclass[a4paper]{article}
+\title{Research Statement}
+\author{Mukesh Tiwari}
+\date{}
+\usepackage{url}
+\setlength{\topmargin}{-10mm}
+\setlength{\textwidth}{7in}
+\setlength{\oddsidemargin}{-8mm}
+\setlength{\textheight}{9in}
+\setlength{\footskip}{1in}
+
+
+\begin{document}
+\fontsize{12}{15}
+\selectfont
+\maketitle
+
+
+
+Fair elections are the only way to keep a democracy alive. In an election, most countries (election commission) use paper ballots to record 
+its citizens' votes (preferences). Election commission then produces the final tally from these votes, 
+while many scrutineers --workers of the participating political parties and members of general 
+public in some countries, e.g., France-- observe the counting process. 
+These scrutineers and paper ballots, both, are crucial to ensure that 
+the election is free from fraud. Scrutineers keep the counting process transparent by making sure all the vote counting 
+rules are followed, while paper ballots ensure verifiability because in case of a dispute these paper ballots 
+can be counted again. Many countries, however, in recent years are introducing computers to conduct some part, or all, of 
+election processes because it is cost effective, accessible to disabled voters, faster result, convenient, etc. 
+In addition, some voting methods are very complex to count by hand. For example,
+single transferable vote used in Australian senate elections, and it may take months to declare the final result of 
+a senate election if 
+counted by hand. Therefore, the Australian Election Commission scans all the ballots of the senate election and 
+uses a (closed source) software program to produce the final tally. Moreover, several cantons in Switzerland use an electronic 
+voting system developed by SwissPost, India uses electronic voting machines, various municipalities in France 
+use electronic voting machines, etc.  Nonetheless, there is a growing debate about using electronic voting machines (computers)
+because of software bugs leading to unintended consequences. For example, Rina Mercuri, 
+a candidate in Australia, lost an election because of 
+a software bug\footnote{\url{https://www.areanews.com.au/story/3971893/mercuri-robbed/}}, 
+Swiss post e-voting source code contained a serious 
+bug\footnote{\url{https://bit.ly/2TDlQ0j}}, security analysis of Indian electronic 
+voting machines have shown many vulnerability \cite{Wolchok:2010:SAI:1866307.1866309}, and 
+these few instances are only the tip of the iceberg because many vendors, producing 
+e-voting software programs, are not open to criticism\footnote{\url{https://bit.ly/3GYHQuC}}.
+Most of 
+these software programs are used across the world by various nations to conduct elections for a public office 
+lack quality measures and public audit \cite{10.1145/3014812.3014837, 9152765, AEC:2013:LMM}. 
+Therefore, it is more imperative than ever  that  we mathematically prove correct (formally verify)  the software programs 
+used in elections. It will make the elections more trustworthy and establish the trust of general members of public
+in electronic voting.
+
+
+
+
+\section{PhD Work}
+My PhD research was focused on verifying electronic voting, specifically vote-counting schemes, in 
+the Coq theorem prover. The goal was to 
+bring  three important ingredients, correctness, privacy, and (universal) verifiability, of a paper ballot election to 
+an electronic setting (electronic voting). In a paper ballot election, correctness and verifiability are
+ensured by scrutineers, while privacy 
+comes for free because of secret paper ballots.  However, achieving these three desirable properties 
+are difficult in electronic voting because software programs used in 
+various stages of an (electronic) election work in a opaque (blackbox) manner. This 
+opaqueness was one of the major reason for Bundesverfassungsgericht, the German Constitutional Court, 
+to rule the usage of electronic voting machines unconstitutional. However, it did not 
+completely rule out the usage of electronic voting machines as long as the outcome of an election 
+is verifiable, i.e., it is possible for the citizen to check the essential steps in the 
+election act and in the ascertainment of the results reliably and without special 
+expert knowledge\footnote{\url{https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/EN/2009/03/cs20090303_2bvc000307en.html}} (verifiability).
+
+
+
+
+
+In my thesis, I demonstrated the correctness of a vote-counting software program 
+by implementing and proving the correctness of the Schulze method \cite{10.1007/978-3-319-66107-0_26} in the Coq theorem 
+prover. 
+The Schulze method is a preferential (ranking) voting method where voters rank the participating 
+candidates according to their preferences. It is one of the most popular voting method amongst the open-source projects and 
+political groups\footnote{\url{https://en.wikipedia.org/wiki/Schulze_method#Users}}.
+While no preferential voting scheme can guarantee all
+desirable properties that one would like due to Arrow's impossibility theorem \cite{arrow1950difficulty}, 
+the Schulze method offers a good compromise with a number of important properties established by economists, 
+social choice theorists, and political scientists. From my Coq implementation of the Schulze method,
+I used Coq's extraction mechanism to get an OCaml program.
+Then I used OCaml compiler to compile the extracted OCaml program to get an executable  
+to count ballots \cite{10.1007/978-3-319-66107-0_26}.
+In addition to correctness, my implementation also
+ensured (universal) verifiability by producing a scrutiny sheet. The scrutiny sheet contained all 
+the data to audit the election independently. The (extracted) OCaml program, however, was 
+very slow and could not count more than 10,000 ballots. Therefore, I wrote another 
+Coq implementation \cite{bennett2017no}, proven equivalent to the slow Coq 
+implementation  \cite{10.1007/978-3-319-66107-0_26}, from which the (extracted) 
+OCaml program was able to count millions of ballots.
+
+In both, slow and fast, Coq implementations, I assumed that (preferential) ballots were in plaintext, i.e., 
+ranking on every ballot was in a (plaintext) number.  Preferential ballots, 
+however, admit ``Italian'' attack \cite{Otten, Benaloh:2009:SSC}. 
+If the number of participating candidates are significantly high in 
+a preferential ballot election,
+then a ballot can be linked to a particular voter if published publicly, on a bulletin board.
+The attack is: a coercer demands a voter to mark them as first and for the rest of candidates
+in a certain given order (permutation). Later, the coercer checks if that the order appears 
+on the bulletin board or not. Although my previous two Coq implementations \cite{10.1007/978-3-319-66107-0_26, bennett2017no} 
+satisfied correctness and verifiability criteria, they lacked privacy due to ``Italian'' attack. 
+In order to avoid this attack on the Schulze method, I used a homomorphic encryption 
+to encrypt the ballots and computed the winner by combining all the 
+(encrypted) ballots, without decrypting any individual ballot (privacy). 
+Moreover, I addressed verifiability by generating a scrutiny sheet (certificate) 
+augmented with zero-knowledge-proofs for various claims, e.g., honest decryption, honest shuffle \cite{10.1007/978-3-030-41600-3_4}. 
+This work was carried out in the Coq theorem prover, so I ended up achieving
+correctness, privacy, and verifiability. The downside of an encrypted ballot Schulze election, 
+or in fact any encrypted ballot election, is difficulty in auditing because of involved 
+mathematics of cryptography. Therefore, in the future I want to explore the possibility of a 
+verified prototype of scrutiny-sheet checker for encrypted ballots Schulze elections.
+Finally, I worked on a verified prototype of a simple approval voting election scrutiny-sheet checker for
+International Association of Cryptologic Research (IACR) \cite{10.1145/3319535.3354247}. 
+In addition, I was involved in the formalisation of single transferable vote, used in the Australian Senate
+\cite{10.1007/978-3-030-00419-4_4}.
+
+
+\section{Future Work}
+My long-term aim is to make formal verification accessible and ubiquitous in 
+software development, specifically for the software programs deployed in public domain
+that affect common people.
+My expertise in \textbf{Theorem Proving, Cryptography, and Election Security}
+gives me an unique perspective to solve challenging problems that matter to many democracies 
+and its citizens. 
+
+\subsection{Mathematically Proven Correct Cryptographic Algorithms}
+	Cryptographic algorithms are used ubiquitously to secure 
+	the data and correctness is an utmost requirement for 
+	any cryptographic algorithm implementation. Therefore, 
+	I will focus on developing mathematically proven correct cryptographic 
+	algorithms used in electronic voting, blockchain, and secure communication, e.g., 
+  	sigma protocols (zero-knowledge-proof), verifiable (shuffling) mix-networks, 
+  	multi-party computations, secret sharing, zk-snark, etc.
+	The rationale behind implementing these algorithms is that anyone can use them to construct 
+	an utility, e.g., an election scrutiny-sheet checker, 
+	a vote-tallying system based on blockchain,
+	a verifiable ballot mixing service, an auction server, etc. One of the motivation
+	behind this project is to replace the SwissPost Java implementations\footnote{\url{https://bit.ly/3EODmnF}} 
+	with mathematically proven correct Coq 
+	implementations\footnote{An ongoing project \url{https://github.com/mukeshtiwari/Dlog-zkp/}}.
+
+	
+
+	
+
+\subsection{Mathematically Proven Correct Vote-Counting Algorithms}
+In future, I will focus on developing mathematically proven correct
+software programs for vote-counting methods used across the world
+such as \textit{Single Transferable Vote (STV), 
+First Past the Post (FPTP), Instant-runoff voting(IRV), etc.,} in the Coq theorem prover. 
+All the vote-counting methods, by design, lend themselves well to computing the 
+winner from plaintext ballots; however, so far there is very little research in computing 
+the winner from encrypted ballots, while ensuring correctness, privacy, and 
+verifiability. Therefore, producing the winner from encrypted 
+ballots is a challenging task.
+The motivation for this project is that once we have  mathematically proven correct 
+components, anyone --election commission or members of general public-- can use them 
+to conduct elections, referendums, and verify elections' outcome 
+without worrying about software bugs.  The cryptographic algorithms formalised in 
+the previous step are going to be used as a building block in this project.
+
+
+
+ 
+
+\subsection{Mathematically Proven Correct Decentralised Application}
+I will focus on a mathematically proven correct decentralised peer-to-peer technical solution 
+\cite{liu2004linkable, Clarke2001, schimmer2009peer, 10.1145/1866307.1866346} in the Coq theorem prover. The motivation 
+is to help 
+whistleblowers in leaking documents and exposing corruption without revealing their identities.
+Being vocal against the government is one the most fundamental right of any citizen, but many 
+authoritative governments do not appreciate dissent of any form. Therefore, it uses 
+its powerful machinery to punish dissidents, in the name of national security. 
+The inspiration for this project comes from David McBridge\footnote{\url{https://en.wikipedia.org/wiki/David_McBride_(whistleblower)}} and 
+Richard Boyle\footnote{\url{https://bit.ly/3OQ6kbC}}.
+David McBride 
+is facing a threat of lifetime jail after
+leaking the material alleging war crimes by members of the Australia's Special Operations
+Task Group in Afghanistan, while Richard Boyle is facing 161 years for exposing the corruption 
+inside the Australian Taxation office
+(Australia is ranked very high in 
+democracy index\footnote{\url{https://worldpopulationreview.com/country-rankings/democracy-countries}}). 
+This research will open the door of collaboration with many groups working in verified 
+networking, and verified distributed systems. 
+
+\subsection{Mathematically Proven Correct Social Choice Properties}
+Computational social choice theory is a research area that is concerned
+with aggregation of ballots (preferences)  of multiple voters (agents) and encompasses 
+computer science, mathematics, economics, and political science. Typical applications of 
+computational social choice theory is voting (preference aggregation), resource allocation, and fair division.
+Most of the proofs in computational social choice theory are pen-and-paper proofs, 
+and one of my long term future research goal is to make them more precise using the Coq theorem prover.
+
+My current focus is voting because voting methods admit many excellent (social choice) properties
+established by political scientists, social choice theorists, 
+and economists. For example, the Schulze method follows Condorcet criterion, reversal symmetry,
+polynomial runtime, etc., so when we formalise the Schulze method, or in fact any vote-counting method, 
+we can push the boundary of correctness by proving that our 
+implementation of the Schulze method also follows all the properties \cite{tiwari2021machine}. 
+In addition, we can analyse these voting
+methods from computational complexity perspective of bribery, if by bribing a certain amount 
+voters a specified candidate can be made an election's winner \cite{faliszewski2006complexity}. 
+This research opens the door of collaboration with political scientists, 
+social choice theorists, economists, and game theorists.
+
+
+
+\section{Current Work at Cambridge and Previous Work at Melbourne} 
+In my current project \emph{Combinators for Algebraic Structures}\footnote{\url{https://www.cl.cam.ac.uk/~tgg22/CAS/}}, 
+I am formalising various graph algorithms on \emph{semiring} algebraic 
+structure and combinators (functions) to 
+combine two, or more, algebraic structures. In this work, I am developing 
+a mathematical correct-by-construction \cite{10.1007/978-3-319-66107-0_26} 
+framework, in Coq thereom prover, based on theory of generalised 
+path-finding algebra \cite{10.1093/imamat/15.2.161, 10.1145/1080091.1080094}. 
+In our framework, depending on concrete instantiation 
+of semiring operators, the same algorithm can compute shortest path, longest paths, 
+widest paths, multi-objective optimisation, data flow of imperative programs, and many more \cite{gondran2008graphs}. 
+In fact, the Schulze method is one instance of our framework. However, 
+the current CAS implementation is highly focused towards networking protocols,
+so as a future work I will focus on adding more algorithms in CAS related 
+to multi-objective optimisation, data flow analysis of imperative programs, and voting. 
+
+
+At the university of Melbourne, my work was focussed on constant-time implementations, 
+a key requirement for many applications including cryptography. 
+In particular, I worked on security concurrent separation logic for formally reasoning about 
+the information flow properties of a concurrent program. 
+I used SecureC, a tool developed at the university of Melbourne, to formalise an email server, 
+an auction server, and a location server. 
+In addition, I developed a information flow secure gradient descent algorithm (a machine learning 
+algorithm) in SecureC for 
+trusted execution environment, e.g., Intel SGX and ARM TrustZone to process highly sensitive 
+data such as parents' income, race, gender, incarceration time, etc\footnote{https://opportunityinsights.org/}.
+This work has been informally presented at PaveTrust workshop\footnote{\url{https://bit.ly/3XJxhBv}}.
+All these works were mathematically proven to leak no sensitive 
+information to an attacker observing the execution of a program processing 
+some secret data.
+
+My lab will be a diverse place where students and researchers from formal 
+verification, cryptography, 
+political science, social choice theory will interact, discuss, 
+collaborate on the ideas that matters to democracies and societies.
+
+
+\bibliography{research-statement-bibliography} 
+\bibliographystyle{unsrt}
+
+\end{document}

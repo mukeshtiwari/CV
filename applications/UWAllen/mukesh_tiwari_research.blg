@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: mukesh_tiwari_research.aux
+The style file: unsrt.bst
+Database file #1: research-statement-bibliography.bib
+Warning--empty journal in Otten
+Warning--can't use both author and editor fields in Clarke2001
+You've used 16 entries,
+            1791 wiz_defined-function locations,
+            558 strings with 7070 characters,
+and the built_in function-call counts, 5241 in all, are:
+= -- 512
+> -- 205
+< -- 13
++ -- 72
+- -- 56
+* -- 296
+:= -- 728
+add.period$ -- 57
+call.type$ -- 16
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 292
+empty$ -- 486
+format.name$ -- 56
+if$ -- 1277
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 18
+newline$ -- 84
+num.names$ -- 22
+pop$ -- 74
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 204
+stack$ -- 0
+substring$ -- 310
+swap$ -- 136
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 49
+width$ -- 18
+write$ -- 196
+(There were 2 warnings)

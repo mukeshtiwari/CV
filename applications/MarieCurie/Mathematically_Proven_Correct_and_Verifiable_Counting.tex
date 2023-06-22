@@ -1,0 +1,218 @@
+  \documentclass[a4paper]{article}
+\title{Marie Curie Fellowship Proposal}
+\author{Mukesh Tiwari}
+\date{}
+\usepackage{url}
+\setlength{\topmargin}{-10mm}
+\setlength{\textwidth}{7in}
+\setlength{\oddsidemargin}{-8mm}
+\setlength{\textheight}{9in}
+\setlength{\footskip}{1in}
+
+
+
+\begin{document}
+\fontsize{11}{15}
+\selectfont
+\maketitle
+
+
+
+
+\section{Objective:} 
+
+In this project, our goal is to develop a mathematically proven correct 
+and secure software (computer program) used in Switzerland's  electronic (internet)
+voting, employed for elections  and referendums, using formal methods.
+
+\section{Background and Problem:}
+
+Switzerland is one of the oldest democracy, and its citizens 
+actively participate in regular decision making, four times in a year,
+and express their opinion by means of voting. 
+In general, paper ballots are used by Swiss citizens to express their 
+opinion; however, in recent years there is a growing debate 
+in favour of electronic voting to address various problems, such as including more 
+of its overseas voters, being more inclusive 
+to towards visually impaired voters\footnote{\url{https://www.usenix.org/conference/enigma2021/presentation/folini}}, 
+minimising the number of informal paper ballots, and streamlining the vote counting 
+process \cite{7114482, DBLP:conf/ev/Driza-MaurerSTW12}.
+In fact, electronic voting is already in practice since 2000 in 
+Switzerland, and the first trial of electronic voting to 
+a binding referendum was conducted in Geneva in 2003, followed 
+by Neuch\^{a}tel and Zurich  in 2005  \cite{gerlach2009three}.
+Geneva developed its own software for electronic voting, 
+meanwhile Zurich took the help of a private company Unisys \cite{4454399}
+and Neuch\^{a}tel developed with the help of their own IT department in collaboration
+with another private company Scytl \cite{reiners2020vote}. 
+Other cantons in Switzerland  
+used the software developed by Geneva, Zurich, and Neuch\^{a}tel to conduct their elections and referendums.
+Nonetheless, currently none of the cantons 
+are developing their own software citing 
+cost\footnote{\url{https://www.swissinfo.ch/eng/politics/digital-voting_geneva-shelves-e-voting-platform-on-cost-grounds/44577490}}
+and security, and they are  
+using the software develop by SwissPost, with the help of Scytl, 
+who entered into the competition in 2016 \cite{10.1007/978-3-031-15911-4_4}.
+SwissPost and Scytl kept the source code of their software closed until 2019, but in 2019 
+they hosted it on GitLab\footnote{\url{https://gitlab.com/swisspost-evoting/}}.
+It only took few months for 
+researchers to break its cryptographic code, the most important part of 
+their software \cite{9152765, locher2019analysis}.
+Consequently, Swiss Federal Chancellery stopped the cantons from using 
+SwissPost software for 2020 elections and formed a committee of 
+experts from various areas including electronic-voting, cryptography, computer network, 
+and political science to 
+analyse the current voting situation and asked for their 
+recommendations\footnote{\url{https://www.bk.admin.ch/bk/en/home/politische-rechte/e-voting/berichte-und-studien.html}
+ (\textit{List of mandated experts.pdf})}. 
+The participating experts have produced 
+their findings and one of the crucial recommendation was to develop the source code 
+of an electronic voting software using formal method (mathematically 
+prove correct code)\footnote{\url{https://www.bk.admin.ch/bk/en/home/politische-rechte/e-voting/berichte-und-studien.html} (see 
+\textit{Summary of the Expert Dialog 2020.pdf})}. Thus, our proposal for a formally verified 
+software (computer program) for electronic voting in Switzerland. 
+
+
+\section{Methodology and Solution}
+It is well-understood in computer science community that software have bugs, 
+and the most widely used method to eliminate bugs from a software is testing. 
+Unfortunately, testing cannot eliminate all the bugs, and therefore, 
+mathematicians and computer scientists have put many decades of research to develop a bug-free 
+software using formal methods. In this project, we are going to use 
+formal methods to develop a mathematically proven correct software
+using the Coq theorem prover \cite{the_coq_development_team_2019_3476303}, EasyCrypt \cite{10.1007/978-3-642-22792-9_5}, and 
+Jasmin \cite{10.1145/3133956.3134078}. 
+
+
+In the first phase of this project, our goal is to understand the specification of 
+crypto-primitives\footnote{\url{https://gitlab.com/swisspost-evoting/crypto-primitives/crypto-primitives/-/blob/master/Crypto-Primitives-Specification.pdf}}, 
+and implement  and prove the crypto-primitives correct in the Coq, EasyCrypt, and Jasmin theorem prover. From our implementation, 
+we intend to extract a mathematically proven correct software for the frontend 
+that runs in the browser interacting with a voter and the backend that runs on the server of an election. 
+Our goal is to extract both, frontend and backend, from the same formalisation. Currently, 
+SwissPost has written the same algorithms in two languages: (i) Java for the backend, and 
+(ii) TypeScript for the frontend.  In principle, writing the same algorithm in 
+two different languages may appear innocuous, but in 
+practice it is problematic because they are, in general, written by two 
+different teams and there is a possibility of two code bases diverging from each other on some corner cases, 
+i.e., outputting two different values for the same input. On the other hand, 
+we are using just one formalism to extract two code bases, divergence is 
+not applicable for our case. 
+The Coq theorem prover has code generator that produces web assembly code (frontend) from 
+a Coq formalisation, but it does not produce a provable correct assembly code (backend). 
+On the other hand, EasyCrypt and Jasmin  produce a provable correct assembly code (backend) from 
+its formalisation, but it lacks web assembly code (frontend) and
+therefore extending it to extract web assembly code will also be a part of this phase.  
+We expect the duration of this phase to be 8 months. 
+
+
+
+In the second phase of this project, our goal is to understand the specification of the election 
+verifier\footnote{\url{https://gitlab.com/swisspost-evoting/e-voting/e-voting-documentation/-/blob/master/System/Verifier_Specification.pdf}}
+and implement it in the Coq, EasyCrypt, and Jasmin theorem prover. From our implementation, 
+we intend to extract a mathematically proven correct software that takes the cryptographic 
+evidence of an elections and certifies if every step has been performed correctly or not. The rationale 
+to produce another verifier is two fold: 
+\begin{itemize}
+  \item the current verifier\footnote{\url{https://gitlab.com/swisspost-evoting/verifier/}} 
+is written in Java and the only way to 
+find a bug in Java program is to write test cases. However, as we eluded above, it is not 
+possible to catch every single bug by means of testing, and therefore, it is possible that 
+Java verifier may return incorrect result for the cryptographic evidence of an elections. On the 
+other hand, our verifier is mathematically proven correct and hence it will never return incorrect result.
+In addition, our verifier can be used to detect bugs in Java verifier by feeding a random input 
+to our verifier and comparing the output of our verifier to the Java verifier's output for the 
+same random input. 
+
+\item having an independent verifier will boost the confidence of voters in the system and 
+reduce the barrier of electronic voting acceptance because the verifier will facilitate 
+an additional independent way to verify an election's outcome \cite{rivest2008notion}. 
+Our verifier can be used by voters, election scrutineers, political parties to ensure the 
+integrity of an election. 
+Cryptographic primitives developed in the first phase will be used in this phase. 
+We expect the duration of this (second) phase to be 8 months.
+
+\end{itemize}
+
+In the third phase of this project, our goal is to understand the whole 
+e-voting system architecture\footnote{\url{https://gitlab.com/swisspost-evoting/e-voting/e-voting-documentation}} 
+and how various components, e.g., voting client, voting server, return codes, etc., 
+interact with each other. We would like to model this 
+interaction mathematically using session types \cite{10.1007/978-3-642-38592-6_5}. 
+Session types are a formalism for distributed communicating processes, i.e., 
+they encode various piece of information in a type system to mathematically reason about 
+distributed communicating processes. It has found applications in numerous domains, e.g, 
+distributed computing \cite{10.1145/3290341}, 
+multi-threaded functional programming \cite{vasconcelos2006type},
+component-based systems \cite{vallecillo2003typing}, web programming \cite{10.1145/3446804.3446854}, etc. 
+However, Coq and EasyCrypt, in their current form, are not capable of reasoning about session types. 
+Therefore, our first step will be extend these tools to reason about 
+session types \cite{ZFHNY2020} and then use them to reason about the interaction between 
+various components. This phase will be in two parts:
+\begin{itemize}
+  \item the first part will be to develop a formal abstract model of interaction.  Given that session types 
+  make the structure of communication explicit, we will get a formal model of interaction for 
+  the e-voting system architecture that can be used to reason about 
+  various properties, e.g., communication safety \cite{TONINHO201761},
+  secure information flow \cite{10.1007/978-3-642-15375-4_17}, computational complexity \cite{10.1145/3209108.3209122},
+  etc. 
+
+  \item the second, and final, part will be to develop an implementation that
+  respects the abstract model, produced in the first part. In addition, 
+  we can also check if the current Java implementation follows our 
+  abstract model or not, which will be a valuable insight about the current Java implementation.
+  In this way, we close all the gaps by producing end-to-end verifiable system \cite{4271648, ZFHNY2020, basin}.
+  We expect the duration of the third phase to be 8 months.
+
+\end{itemize}
+
+
+
+
+
+
+
+  
+\section{Deliverables:} 
+
+This project, if funded, will produce the following:
+\begin{itemize}
+  \item output of the first phase: a mathematically proven correct software for the frontend and backend 
+    for cryptographic primitives (project duration: 8 months). 
+  \item output of the second phase: a mathematically proven correct software that takes the cryptographic evidence of an elections
+    and certifies if every step has been performed correctly or not (project duration: 8 months). 
+  \item output of the third phase: a mathematical model of interaction and its implementation 
+    for the e-voting system architecture (project duration: 8 months).
+  
+\end{itemize}
+
+Our mathematically proven correct software written in Coq, EasyCrypt, and Jasmin 
+can be used to test the current Java code written by SwissPost. In addition, we 
+will significantly improve the understanding of interaction by producing a formal model 
+in the third phase of this project. This project, if funded, will 
+not only produce the mathematically proven correct software but it will also 
+enhance our understanding the whole system that include interaction amongst 
+various components and the security of voting protocol. 
+
+In addition, our project will bring more transparency because not only we will 
+open source the software but we will also publish papers in security conferences. 
+Our claims will go through a rigorous review process of the program committee --leading 
+security experts-- of security conferences, 
+a very different situation from software companies' practices. Companies providing software for 
+electronic voting always cite intellectual property to not release the 
+source and create a very opaque situation. This opaqueness was one of the major reason for
+Bundesverfassungsgericht\footnote{\url{https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/EN/2009/03/cs20090303_2bvc000307en.html}}, 
+the German Constitutional Court, to rule the usage of electronic voting
+machines unconstitutional. It, however, did not completely rule out the usage of electronic voting
+machines as long as the outcome of an election is verifiable, i.e., it is possible for citizens to check
+the essential steps and ascertain the results reliably and without
+any special expert knowledge (verifiability).
+
+
+
+\bibliography{reference}
+\bibliographystyle{unsrt}
+
+
+
+\end{document}

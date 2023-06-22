@@ -1,0 +1,218 @@
+\documentclass[a4paper]{article}
+\title{Research and Teaching Statement}
+\author{Mukesh Tiwari}
+\date{}
+\usepackage{url}
+\setlength{\topmargin}{-10mm}
+\setlength{\textwidth}{7in}
+\setlength{\oddsidemargin}{-8mm}
+\setlength{\textheight}{9in}
+\setlength{\footskip}{1in}
+\linespread{0.90} 
+
+\begin{document}
+\fontsize{11}{15}
+\selectfont
+\maketitle
+
+My work aims to build \textbf{correct software} 
+using the Coq theorem prover. 
+I focus on formal verification of computer programs used in elections, cryptography, 
+networking, and computational social choice theory. Below are some potential projects 
+that I would like to focus at King's College London, if given the position.
+
+
+\section{Future Work}
+\begin{itemize}
+\item I would like to focus 
+	on formally verified cryptographic primitives used in
+	verifiable computing, multi-party computation (MPC), and blockchain.
+	The recent development in the 
+	area of zero-knowledge-proofs, in particular 
+	zero-knowledge succinct non-interactive argument of knowledge (zk-SNARK), 
+	has led to a exponential growth in many useful 
+	privacy preserving applications in verifiable computing, MPC, etc. Most of these 
+	applications, however, are written 
+	in unsound language (Rust/Python/C/Java) and contain bugs,
+	lack security proof, and therefore using formal verification 
+	to improve their correctness and security would bolster the 
+	confidence of a user of these applications.
+	In addition, zk-SNARK has massive potential in electronic-voting. The current 
+	practice to verify the integrity of an election conducted electronically is to 
+	recompute the whole count on the publicly available (electronic) ballots, but 
+	this excludes many voters from verifying the integrity of the election because 
+	they don't posses a powerful enough computing device. Many of 
+	zk-SNARKs produce a very small size proof for the integrity of a computation 
+	regardless of the computation data. Therefore, if we deploy zk-SNARK in 
+	electronic-voting, it would 
+	increase the number of scrutineers because anyone, including the 
+	mobile devices holders, can verify the integrity of an election 
+	by checking these small size proofs. 
+
+\item In my current project \emph{Combinators for Algebraic 
+	Structures (CAS)}\footnote{\url{https://www.cl.cam.ac.uk/~tgg22/CAS/}}, 
+	I am formalising various graph algorithms on \emph{Semiring} algebraic 
+	structure and combinators (functions) to combine two, or more, algebraic structures.
+	In our framework, depending on concrete instantiation of Semiring operators,
+	the same algorithm can compute shortest path, longest paths, widest paths, 
+	multi-objective optimisation, data flow of imperative programs, and many more.
+	However, the current CAS algorithms are highly focused towards networking 
+	protocols, so as a future work I will focus on adding more algorithms 
+	related to multi-objective optimisation, data flow analysis of
+	imperative programs, Petri nets, etc. 
+
+\item At the university of Melbourne, I worked on 
+security concurrent separation logic for formally reasoning about the information 
+flow security in concurrent programs. I used \textit{SecureC}, a tool developed at the university of 
+Melbourne, to formalise an email server, an auction server, a location server, and 
+a differentially private gradient descent algorithm. 
+All these works were proven to leak no sensitive 
+information to attackers, assuming that the compiler respects all 
+assumption and soundness of implementation of \textit{SecureC}. However, 
+\textit{SecureC} is very limited in terms of expressibility and tooling 
+and therefore it cannot be used to model a real world case study. I would like to work on 
+adding information flow support in Iris --a Coq library--, with my co-author Toby Murray, 
+and use MetaCoq to get a verified machine code from my formalisation. 
+
+
+\item In one of my recent project, me with my co-authors --after 1.5 years of 
+painstaking effort-- formalised a critical 
+piece of code (mix-network) in the SwissPost --used in legally binding elections 
+in Switzerland-- in the Coq theorem prover and extracted an OCaml code from our 
+formalisation against which the Java code of SwissPost can be tested. 
+In the process, we found various 
+corner cases and a flaw in a decade old cryptographic proof.  Given my 
+expertise in formal verification, I would like with my PhD students and 
+Postdocs researchers to explore and formalise other 
+piece of code used in public domain, e.g., machine learning 
+models and code deployed in self-driving cars, etc. 
+
+
+\end{itemize}	
+
+\section{Past Work}
+My PhD research was focused on verifying electronic voting, specifically vote-counting schemes, in 
+the Coq theorem prover. The goal was to 
+bring  three important ingredients (i) correctness, (ii) privacy, and (iii) verifiability of a 
+paper-ballot election to 
+an electronic setting (electronic voting).
+In my thesis, I demonstrated the correctness of the Schulze method 
+by implementing it and proving its correctness in the Coq theorem 
+prover. The Schulze method is a preferential (ranking) voting method where voters rank the participating 
+candidates according to their preferences. It is one of the most popular voting method amongst the open-source projects and 
+political groups\footnote{\url{https://en.wikipedia.org/wiki/Schulze_method#Users}}.
+In addition, my implementation 
+ensured (universal) verifiability by producing a scrutiny sheet 
+with the winner of an election. The scrutiny sheet contained all the data related 
+to the election that could be used to audit the election independently. 
+The extracted OCaml code from this formalisation, however, was 
+very slow, so I wrote another fast implementation, proven equivalent to the slow one,
+capable of counting millions of ballots.
+
+In both formalisation, I assumed that (preferential) ballots were in plaintext, i.e., 
+ranking on every ballot was in a (plaintext) number.  Preferential ballots, 
+however, admit ``Italian'' attack. 
+If the number of participating candidates are significantly high in 
+a preferential ballot election,
+then a ballot can be linked to a particular voter if published on a bulletin board.
+A coercer demands the voter to mark them as first and for the rest of candidates
+in a certain permutation. Later, the coercer checks if that permutation appears 
+on the bulletin board or not. In order to
+avoid this attack on the Schulze method, I used homomorphic encryption to count the (encrypted) ballots, without decrypting 
+any individual ballot. Moreover, I addressed verifiability by generating a scrutiny sheet (certificate) 
+augmented with zero-knowledge-proofs for various claims, e.g., honest decryption, honest shuffle,  
+during the counting. 
+Finally, I wanted to develop to formally 
+verified scrutiny sheet checker for encrypted ballots Schulze election, but due to the lack of 
+time\footnote{PhD duration is 3.5 years in Australia} I worked on a scrutiny sheet checker for a simple approval voting election,
+International Association of Cryptologic Research (IACR) election.
+In addition, I was involved in formalisation of single transferable vote, used in the Australian Senate election.
+
+
+
+
+
+
+
+\section{Teaching}
+My teaching philosophy is not to immediately reach a solution but to develop a 
+thinking process (problem solving mindset) that leads to the solution. I believe every 
+student is different and has a unique style of learning, and my role is to help them find 
+and hone their style. When I started teaching as an assistant professor at the International Institute of Information 
+Technology (IIIT), Bhubanesware, India\footnote{It is a small technical school},
+my single biggest challenge was keeping the students engaged in my class, especially the first year 
+students in C programming course. At the IIIT, I taught C programming to 
+first year students, Compiler Design and Java programming to third year students, and
+Cryptography to final year (4th year) students. In each course, every single 
+problem,  more or less, boiled down to keeping the students engaged in a topic. 
+In order to keep them engaged in a class, I took a Coursera course on 
+learning\footnote{\url{https://www.coursera.org/learn/learning-how-to-learn}} and 
+read many academic articles and non-academic articles about effective learning.
+I tried some of the techniques suggested in the Coursera course and 
+academic and non-academic articles in my classes. Below I 
+describe my experiences with teaching and efforts to engage my students. 
+
+
+\subsection{Setting Clear Goals}
+In every course, I started with the end goal of the course. For example, 
+in C programming course, I told my students that by the end of this 
+course they would be 
+able to write simple C programs, e.g., calculator, 
+validating a debit card, and other simple real-world problems. The rationale was 
+to show a vision to excite them 
+for learning and instill the feeling of empowerment, from
+being a consumer to being a developer of software programs.
+
+
+\subsection{Start with Why}
+One thing that I learnt by teaching for 3 years is that if you want a concept 
+to stick in someone's mind, then start with a \textit{why}\footnote{I learnt this idea by reading the book 
+\textit{Start With Why} by Simon Sinek.}. For example, when I introduced functions 
+in C programming course, I wanted to convey the need of functions. Therefore, I started the class by 
+asking them to write a program, using pen and paper, of \textbf{factorial of a number $n$} ($n!$). 
+Every one was comfortable with loops, so it was quick. I then asked them to write 
+another program: \textbf{$k^{th}$ power of the factorial of $n$} ($(n!)^k$). 
+In this assignment, some added an outer loop to cover the factorial computation, 
+and some added another loop after the factorial computation (stored the factorial 
+computation result and used it in later computation). 
+At this point, I asked the class 
+how one could write a program of \textbf{factorial of 
+the $k^{th}$ power of the factorial of $n$} ($((n!)^k)!$). The class slowly realised 
+that they needed to duplicate a lot of code. I then introduced functions 
+and showed them the solution of the previous problem by function composition.
+
+
+\subsection{Catching my Mistakes}
+To promote active participation, at the beginning of every class I would announce that 
+on a few occasions I would make deliberate mistakes in solving a problem, and the
+goal of the class was to catch me on the spot.
+If the class succeeded, they received  
+class participation marks, otherwise I told them my 
+mistake and no one received any marks.
+In every class, especially in programming, 
+first I would teach a topic, and later I would solve some problems on 
+a blackboard, related to the topic. 
+It was during the problem solving where I committed deliberate mistakes.
+It increased the class participation by an order of 
+magnitude\footnote{I learnt this 
+from advertising agencies where they write some ads wrong 
+intentionally to grab the attention.}. In every single 
+feedback that I got during my 3 years of teaching, 
+almost everyone appreciated this idea of making deliberate mistakes. 
+
+
+
+
+
+My lab will be a very diverse place where students and researchers from formal 
+verification, cryptography, 
+political science, social science, social choice theory will interact, discuss, 
+collaborate on the ideas that matters to democracies and societies. At King's College, 
+I can collaborate with Prof. Martin Albrecht on formal verification of 
+post-quantum cryptography 
+where I can combine my formal verification expertise with his post-quantum 
+expertise; I can collaborate with  Dr Ruba Abu-Salma
+on human-centred 
+security for the computer programs used in democratic elections. 
+
+\end{document}

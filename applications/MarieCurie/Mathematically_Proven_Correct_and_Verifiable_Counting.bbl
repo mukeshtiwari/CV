@@ -1,0 +1,155 @@
+\begin{thebibliography}{10}
+
+\bibitem{7114482}
+Uwe Serdult, Micha Germann, Fernando Mendez, Alicia Portenier, and Christoph
+  Wellig.
+\newblock {Fifteen years of internet voting in Switzerland [History, Governance
+  and Use]}.
+\newblock In {\em 2015 Second International Conference on eDemocracy and
+  eGovernment (ICEDEG)}, pages 126--132, 2015.
+
+\bibitem{DBLP:conf/ev/Driza-MaurerSTW12}
+Ardita Driza{-}Maurer, Oliver Spycher, Geo Taglioni, and Anina Weber.
+\newblock {E-voting for Swiss Abroad: {A} Joint Project between the
+  Confederation and the Cantons}.
+\newblock In Manuel~J. Kripp, Melanie Volkamer, and R{\"{u}}diger Grimm,
+  editors, {\em 5th International Conference on Electronic Voting 2012,
+  {(EVOTE} 2012), Co-organized by the Council of Europe, Gesellschaft f{\"{u}}r
+  Informatik and E-Voting.CC, July 11-14, 2012, Castle Hofen, Bregenz,
+  Austria}, volume {P-205} of {\em {LNI}}, pages 173--187. {GI}, 2012.
+
+\bibitem{gerlach2009three}
+Jan Gerlach and Urs Gasser.
+\newblock Three case studies from switzerland: E-voting.
+\newblock {\em Berkman Center Research Publication No}, 3:2009, 2009.
+
+\bibitem{4454399}
+Giampiero~E.G. Beroggi.
+\newblock {Secure and Easy Internet Voting}.
+\newblock {\em Computer}, 41(2):52--56, 2008.
+
+\bibitem{reiners2020vote}
+Markus Reiners.
+\newblock {Vote electronique in Switzerland: Comparison of relevant pilot
+  projects}.
+\newblock {\em Journal of Comparative Politics}, 13(1):58--75, 2020.
+
+\bibitem{10.1007/978-3-031-15911-4_4}
+Thomas Haines, Olivier Pereira, and Vanessa Teague.
+\newblock {Running the Race: A Swiss Voting Story}.
+\newblock In Robert Krimmer, Melanie Volkamer, David Duenas-Cid, Peter
+  R{\o}nne, and Micha Germann, editors, {\em Electronic Voting}, pages 53--69,
+  Cham, 2022. Springer International Publishing.
+
+\bibitem{9152765}
+Thomas Haines, Sarah~Jamie Lewis, Olivier Pereira, and Vanessa Teague.
+\newblock {How not to prove your election outcome}.
+\newblock In {\em 2020 IEEE Symposium on Security and Privacy (SP)}, pages
+  644--660, 2020.
+
+\bibitem{locher2019analysis}
+Philipp Locher, Rolf Haenni, and Reto~E Koenig.
+\newblock {Analysis of the cryptographic implementation of the swiss post
+  voting protocol}, 2019.
+
+\bibitem{the_coq_development_team_2019_3476303}
+The Coq~Development Team.
+\newblock {The Coq Proof Assistant, version 8.10.0}, October 2019.
+
+\bibitem{10.1007/978-3-642-22792-9_5}
+Gilles Barthe, Benjamin Gr{\'e}goire, Sylvain Heraud, and Santiago~Zanella
+  B{\'e}guelin.
+\newblock {Computer-Aided Security Proofs for the Working Cryptographer}.
+\newblock In Phillip Rogaway, editor, {\em Advances in Cryptology -- CRYPTO
+  2011}, pages 71--90, Berlin, Heidelberg, 2011. Springer Berlin Heidelberg.
+
+\bibitem{10.1145/3133956.3134078}
+Jos\'{e}~Bacelar Almeida, Manuel Barbosa, Gilles Barthe, Arthur Blot, Benjamin
+  Gr\'{e}goire, Vincent Laporte, Tiago Oliveira, Hugo Pacheco, Benedikt
+  Schmidt, and Pierre-Yves Strub.
+\newblock {}jasmin: High-assurance and high-speed cryptography.
+
+\bibitem{rivest2008notion}
+Ronald~L Rivest.
+\newblock On the notion of ‘software independence’in voting systems.
+\newblock {\em Philosophical Transactions of the Royal Society A: Mathematical,
+  Physical and Engineering Sciences}, 366(1881):3759--3767, 2008.
+
+\bibitem{10.1007/978-3-642-38592-6_5}
+Laura Bocchi, Tzu-Chun Chen, Romain Demangeon, Kohei Honda, and Nobuko Yoshida.
+\newblock {Monitoring Networks through Multiparty Session Types}.
+\newblock In Dirk Beyer and Michele Boreale, editors, {\em Formal Techniques
+  for Distributed Systems}, pages 50--65, Berlin, Heidelberg, 2013. Springer
+  Berlin Heidelberg.
+
+\bibitem{10.1145/3290341}
+Simon Fowler, Sam Lindley, J.~Garrett Morris, and S\'{a}ra Decova.
+\newblock {Exceptional Asynchronous Session Types: Session Types without
+  Tiers}.
+\newblock {\em Proc. ACM Program. Lang.}, 3(POPL), jan 2019.
+
+\bibitem{vasconcelos2006type}
+Vasco~T Vasconcelos, Simon~J Gay, and Ant{\'o}nio Ravara.
+\newblock {Type checking a multithreaded functional language with session
+  types}.
+\newblock {\em Theoretical Computer Science}, 368(1-2):64--87, 2006.
+
+\bibitem{vallecillo2003typing}
+Antonio Vallecillo, Vasco~T Vasconcelos, and Ant{\'o}nio Ravara.
+\newblock Typing the behavior of objects and components using session types.
+\newblock {\em Electronic Notes in Theoretical Computer Science},
+  68(3):439--456, 2003.
+
+\bibitem{10.1145/3446804.3446854}
+Anson Miu, Francisco Ferreira, Nobuko Yoshida, and Fangyi Zhou.
+\newblock Communication-safe web programming in typescript with routed
+  multiparty session types.
+\newblock In {\em Proceedings of the 30th ACM SIGPLAN International Conference
+  on Compiler Construction}, CC 2021, pages 94--106, New York, NY, USA, 2021.
+  Association for Computing Machinery.
+
+\bibitem{ZFHNY2020}
+Fangyi Zhou, Francisco Ferreira, Raymond Hu, Rumyana Neykova, and Nobuko
+  Yoshida.
+\newblock {Statically Verified Refinements for Multiparty Protocols}.
+\newblock In {\em OOPSLA 2020: Conference on Object-Oriented Programming
+  Systems, Languages and Applications}, volume~4 of {\em PACMPL}, pages
+  148:1--148:30. ACM, 2020.
+
+\bibitem{TONINHO201761}
+Bernardo Toninho and Nobuko Yoshida.
+\newblock Certifying data in multiparty session types.
+\newblock {\em Journal of Logical and Algebraic Methods in Programming},
+  90:61--83, 2017.
+
+\bibitem{10.1007/978-3-642-15375-4_17}
+Sara Capecchi, Ilaria Castellani, Mariangiola Dezani-Ciancaglini, and Tamara
+  Rezk.
+\newblock {Session Types for Access and Information Flow Control}.
+\newblock In Paul Gastin and Fran{\c{c}}ois Laroussinie, editors, {\em CONCUR
+  2010 - Concurrency Theory}, pages 237--252, Berlin, Heidelberg, 2010.
+  Springer Berlin Heidelberg.
+
+\bibitem{10.1145/3209108.3209122}
+Romain Demangeon and Nobuko Yoshida.
+\newblock Causal computational complexity of distributed processes.
+\newblock In {\em Proceedings of the 33rd Annual ACM/IEEE Symposium on Logic in
+  Computer Science}, LICS '18, pages 344--353, New York, NY, USA, 2018.
+  Association for Computing Machinery.
+
+\bibitem{4271648}
+Ricardo Corin, Pierre-Malo Denielou, Cedric Fournet, Karthikeyan Bhargavan, and
+  James Leifer.
+\newblock {Secure Implementations for Typed Session Abstractions}.
+\newblock In {\em 20th IEEE Computer Security Foundations Symposium (CSF'07)},
+  pages 170--186, 2007.
+
+\bibitem{basin}
+L.~Arquint, F.~A. Wolf, J.~Lallemand, R.~Sasse, C.~Sprenger, S.~N. Wiesner,
+  D.~Basin, and P.~Müller.
+\newblock {Sound Verification of Security Protocols: From Design to
+  Interoperable Implementations}.
+\newblock In {\em 2023 2023 IEEE Symposium on Security and Privacy (SP) (SP)},
+  pages 1077--1093, Los Alamitos, CA, USA, may 2023. IEEE Computer Society.
+
+\end{thebibliography}

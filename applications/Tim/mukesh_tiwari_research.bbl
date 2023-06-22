@@ -1,0 +1,129 @@
+\begin{thebibliography}{10}
+
+\bibitem{Wolchok:2010:SAI:1866307.1866309}
+Scott Wolchok, Eric Wustrow, J.~Alex Halderman, Hari~K. Prasad, Arun Kankipati,
+  Sai~Krishna Sakhamuri, Vasavya Yagati, and Rop Gonggrijp.
+\newblock Security analysis of india's electronic voting machines.
+\newblock In {\em Proceedings of the 17th ACM Conference on Computer and
+  Communications Security}, CCS '10, pages 1--14, New York, NY, USA, 2010. ACM.
+
+\bibitem{10.1145/3014812.3014837}
+Andrew Conway, Michelle Blom, Lee Naish, and Vanessa Teague.
+\newblock {An Analysis of New South Wales Electronic Vote Counting}.
+\newblock In {\em Proceedings of the Australasian Computer Science Week
+  Multiconference}, ACSW '17, New York, NY, USA, 2017. Association for
+  Computing Machinery.
+
+\bibitem{9152765}
+Thomas Haines, Sarah~Jamie Lewis, Olivier Pereira, and Vanessa Teague.
+\newblock {How Not to Prove Your Election Outcome}.
+\newblock In {\em 2020 IEEE Symposium on Security and Privacy (SP)}, pages
+  644--660, 2020.
+
+\bibitem{AEC:2013:LMM}
+{Australian Electoral Commission}.
+\newblock {L}etter to {M}r {M}ichael {C}ordover, {LSS4883} {O}utcome of
+  {I}nternal {R}eview of the {D}ecision to {R}efuse your {FOI} {R}equest no.
+  {LS4849}, 2013.
+\newblock {a}valiable via
+  \url{http://www.aec.gov.au/information-access/foi/2014/files/ls4912-1.pdf},
+  retrieved October 23, 2019.
+
+\bibitem{10.1007/978-3-319-66107-0_26}
+Dirk Pattinson and Mukesh Tiwari.
+\newblock {Schulze Voting as Evidence Carrying Computation}.
+\newblock In Mauricio Ayala-Rinc{\'o}n and C{\'e}sar~A. Mu{\~{n}}oz, editors,
+  {\em Interactive Theorem Proving}, pages 410--426, Cham, 2017. Springer
+  International Publishing.
+
+\bibitem{arrow1950difficulty}
+Kenneth~J Arrow.
+\newblock A difficulty in the concept of social welfare.
+\newblock {\em Journal of political economy}, 58(4):328--346, 1950.
+
+\bibitem{bennett2017no}
+Lyria Bennett~Moses, Rajeev Gor{\'e}, Ron Levy, Dirk Pattinson, and Mukesh
+  Tiwari.
+\newblock {No More Excuses: Automated Synthesis of Practical and Verifiable
+  Vote-Counting Programs for Complex Voting Schemes}.
+\newblock In {\em International Joint Conference on Electronic Voting}, pages
+  66--83. Springer, 2017.
+
+\bibitem{Otten}
+J.~Otten.
+\newblock Fuller disclosure than intended.
+\newblock 2003.
+\newblock Accessed on October 17, 2019.
+
+\bibitem{Benaloh:2009:SSC}
+Josh Benaloh, Tal Moran, Lee Naish, Kim Ramchen, and Vanessa Teague.
+\newblock {Shuffle-sum: coercion-resistant verifiable tallying for {STV}
+  voting}.
+\newblock {\em {IEEE} Trans. Information Forensics and Security},
+  4(4):685--698, 2009.
+
+\bibitem{10.1007/978-3-030-41600-3_4}
+Thomas Haines, Dirk Pattinson, and Mukesh Tiwari.
+\newblock {Verifiable Homomorphic Tallying for the Schulze Vote Counting
+  Scheme}.
+\newblock In Supratik Chakraborty and Jorge~A. Navas, editors, {\em Verified
+  Software. Theories, Tools, and Experiments}, pages 36--53, Cham, 2020.
+  Springer International Publishing.
+
+\bibitem{10.1145/3319535.3354247}
+Thomas Haines, Rajeev Gor\'{e}, and Mukesh Tiwari.
+\newblock {Verified Verifiers for Verifying Elections}.
+\newblock In {\em Proceedings of the 2019 ACM SIGSAC Conference on Computer and
+  Communications Security}, CCS ’19, page 685–702, New York, NY, USA, 2019.
+  Association for Computing Machinery.
+
+\bibitem{10.1007/978-3-030-00419-4_4}
+Milad~K. Ghale, Rajeev Gor{\'e}, Dirk Pattinson, and Mukesh Tiwari.
+\newblock {Modular Formalisation and Verification of STV Algorithms}.
+\newblock In Robert Krimmer, Melanie Volkamer, V{\'e}ronique Cortier, Rajeev
+  Gor{\'e}, Manik Hapsara, Uwe Serd{\"u}lt, and David Duenas-Cid, editors, {\em
+  Electronic Voting}, pages 51--66, Cham, 2018. Springer International
+  Publishing.
+
+\bibitem{liu2004linkable}
+Joseph~K Liu, Victor~K Wei, and Duncan~S Wong.
+\newblock {Linkable Spontaneous Anonymous Group Signature for Ad Hoc Groups}.
+\newblock In {\em Australasian Conference on Information Security and Privacy},
+  pages 325--335. Springer, 2004.
+
+\bibitem{Clarke2001}
+Ian Clarke, Oskar Sandberg, Brandon Wiley, and Theodore~W. Hong.
+\newblock {\em Freenet: A Distributed Anonymous Information Storage and
+  Retrieval System}, pages 46--66.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2001.
+
+\bibitem{schimmer2009peer}
+zzz (Pseudonym) and Lars Schimmer.
+\newblock {Peer Profiling and Selection in the I2P Anonymous Network}.
+\newblock In {\em PetCon 2009.1}, pages 59--70, 2009.
+
+\bibitem{10.1145/1866307.1866346}
+Henry Corrigan-Gibbs and Bryan Ford.
+\newblock Dissent: Accountable anonymous group messaging.
+\newblock In {\em Proceedings of the 17th ACM Conference on Computer and
+  Communications Security}, CCS '10, page 340–350, New York, NY, USA, 2010.
+  Association for Computing Machinery.
+
+\bibitem{tiwari2021machine}
+Mukesh Tiwari and Dirk Pattinson.
+\newblock {Machine Checked Properties of the Schulze Method}.
+\newblock In {\em 7th Workshop on Hot Issues in Security Principles and Trust},
+  2021.
+
+\bibitem{faliszewski2006complexity}
+Piotr Faliszewski, Edith Hemaspaandra, and Lane~A Hemaspaandra.
+\newblock The complexity of bribery in elections.
+\newblock In {\em AAAI}, volume~6, pages 641--646, 2006.
+
+\bibitem{gondran2008graphs}
+Michel Gondran and Michel Minoux.
+\newblock {\em {Graphs, Dioids and Semirings: New Models and Algorithms}},
+  volume~41.
+\newblock Springer Science \& Business Media, 2008.
+
+\end{thebibliography}
