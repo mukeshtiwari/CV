@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.27)  10 APR 2023 14:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.27)  16 SEP 2023 14:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -666,15 +666,15 @@ Package rerunfilecheck Info: File `mukesh_selection_criteria.out' has not change
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26500 strings out of 478268
- 513200 string characters out of 5846346
+ 26498 strings out of 478268
+ 513184 string characters out of 5846346
  814629 words of memory out of 5000000
  44249 multiletter control sequences out of 15000+600000
- 475702 words of font info for 64 fonts, out of 8000000 for 9000
+ 475651 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  129i,11n,122p,1080b,470s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb>
-Output written on mukesh_selection_criteria.pdf (1 page, 98747 bytes).
+Output written on mukesh_selection_criteria.pdf (1 page, 98728 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream
