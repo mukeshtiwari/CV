@@ -36,8 +36,8 @@
 \phone[mobile]{+44-7824648138}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
-\email{mt883@cam.ac.uk, mukesh.tiwari@anu.edu.au, mukeshtiwari.iiitm@gmail.com}                               % optional, remove / comment the line if not wanted
-%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\email{mukesh.tiwari@swansea.ac.uk, mukeshtiwari.iiitm@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{mukeshtiwari.github.io/}                         % optional, remove / comment the line if not wanted
 \social[linkedin]{mukesh-tiwari-3609486/}                        % optional, remove / comment the line if not wanted
 %\social[twitter]{mukesh\_tiwari}                             % optional, remove / comment the line if not wanted
 \social[github]{mukeshtiwari}                              % optional, remove / comment the line if not wanted
@@ -67,30 +67,42 @@
 
 \section{Education}
 \cventry{2016--2020}{PhD, Computer Science}{Australian National University}{Canberra}{Australia}{}  % arguments 3 to 6 can be left empty
-\cventry{2004--2009}{Integrated Post Graduate}{Indian Institute of Information Technology \& Management}{Gwalior}{India}{}
+\cventry{2004--2009}{Integrated Postgraduate}{Indian Institute of Information Technology \& Management}{Gwalior}{India}{}
 
 \section{PhD thesis}
 \cvitem{Title}{\emph{Formally Verified Verifiable Electronic Voting Scheme}}
 \cvitem{Supervisor}{Dirk Pattinson}
 \cvitem{Description}{We focussed on three main challenges posed by electronic voting: 
 correctness, privacy, and verifiability. We addressed correctness by using 
-a theorem prover to implement the vote counting algorithm, 
+a theorem prover to implement a vote-counting algorithm, 
 privacy by using homomorphic encryption,  and verifiability 
 by generating a independently checkable scrutiny sheet. 
-Our work has been carried out in Coq theorem prover. }
-\cventry{2021-}{Senior Research Fellow}{University of Cambridge}{Cambridge}{United Kingdom}
-  {I am working on formalising network protocols framework to ensure their safety and
-  security. The goal is to develop a mathematical 
-  framework, proven correct in a theorem prover, so that a protocol 
-  designer can assess the properties of their design using my framework}
-\cventry{2020-21}{Research Fellow}{University of Melbourne}{Melbourne}{Australia}
+Our work had been formalised in the Coq theorem prover. }
+\section{Employment}
+\cventry{2024-}{Lecture}{Swansea University}{Swansea}{United Kingdom}
+  {I am exploring the use of zero-knowledge succinct arguments of knowledge (zk-SNARKs) in electronic voting and 
+  anonymous credentials. The goal is to replicate the confidentiality and integrity of a 
+  traditional paper-ballot election in an electronic format.}
+\cventry{2023-2024}{Senior Research Associate}{University of Oxford}{Oxford}{United Kingdom}
+  {I am working on connecting symbolic models of cryptographic protocols and their verified implementations using 
+session types. The goal is to obtain a mathematically proven correct distributed implementation that 
+mimics the real-world situation.}
+\cventry{2021-2023}{Senior Research Associate}{University of Cambridge}{Cambridge}{United Kingdom}
+  {I worked on formalising a networking-protocol framework based on semiring algebraic structure in 
+  the Coq theorem prover. The goal was to develop a mathematical proven correct framework so that a protocol 
+  designer could assess the properties of their protocols using my framework.}
+\cventry{2020-21}{Research Associate}{University of Melbourne}{Melbourne}{Australia}
   {I worked with Toby Murray  on \textit{Security Concurrent Separation Logic}. 
   The aim was 
-  to formally (mathematically) reason about memory safety and information flow property of concurrent programs,  written in C.}
+  to mathematically reason about memory safety and information flow property of concurrent programs written in C.}
+\cventry{2018-20}{Tutor}{Australian National Univeristy}{Canberra}{Australia}
+  {I was a tutor for a first year logic course and Haskell programming course. My role was to 
+  help students understand the concepts, clearing their doubts, and assisting them in homework.}
 \cventry{2013--2015}{Lecturer}{International Institute of Information Technology}{Bhubaneswar}{India}
-{This role was primarily geared towards teaching, and 
-the courses I taught were \textit{C programming} and \textit{Cryptography}.  In addition,  every year I supervised two
-master's students in their final year project.}
+{This role was primarily teaching focussed, and 
+the courses I taught were \textit{C programming, Java Programming, Web Technologies, 
+Compiler Design,} and \textit{Cryptography}.  
+In addition,  every year I supervised two master's students in their final year project.}
 
 %\subsection{Miscellaneous}
 \cventry{2012--2013}{Haskell Developer}{Parallel Scientific}{Colorado}{USA}
@@ -98,19 +110,155 @@ master's students in their final year project.}
 written in Haskell.}
 
 \cventry{2009--2012}{Technical Assistant}{Government of India}{Kolkata}{India}
-{I worked as a contract developer for automating the day-to-day job,  including enforcing the security policies of the organisation.}
+{I worked as a developer for automating the day-to-day job,  including enforcing the security policies of the organisation.}
 
-\cventry{2008--2008}{Summer Intern} {Arcelor Mittal, Research \& Development Technological Centre} {Avil{\'e}s} {Spain} 
-{During this role, I worked on formalising many business requirements into a linear programming problem and wrote a 
- custom interface that interacted with their in-house linear programming solver.}
+\cventry{2008--2008}{Summer Intern} {Arcelor-Mittal, Research \& Development Technological Centre} {Avil{\'e}s} {Spain} 
+{I worked on formalising many business requirements into a linear programming problem and wrote a 
+ custom interface that interacted with Arcelor-Mittal's in-house linear programming solver.}
 
 %\section{Languages}
 %\cvitemwithcomment{Language 1}{Skill level}{Comment}
 %\cvitemwithcomment{Language 2}{Skill level}{Comment}
 %\cvitemwithcomment{Language 3}{Skill level}{Comment}
 
+
+\section{Conference Publication}
+\cvitem{[1]}{{Toby Murray, Mukesh Tiwari, Gidon Ernst, and David A. Naumann. 
+    Assume but Verify: Deductive Verification of Leaked Information in Concurrent Applications. 
+    In Proceedings of the 2023 ACM SIGSAC Conference on 
+    Computer and Communications Security, CCS '23, Copenhagen, Denmark, 26-30 Nov.}
+    {\url{https://github.com/mukeshtiwari/IFMachine/}}.
+    {(co-developer with Toby Murray and Gidon Ernst. In this work, I formally verified the case studies: 
+    differentially private location-server, federated machine learning 
+    server, aution-server, and email-server in SecureC; project duration: 1.6 years).}}
+
+\cvitem{[2]}{{Thomas Haines, Rajeev Gor{\'e}, and Mukesh Tiwari.
+    Machine-checking Multi-Round Proofs of Shuffle:Terelius-Wikstrom and Bayer-Groth. 
+    32nd USENIX Security Symposium (USENIX 2023), Anaheim, California, USA, August 9-11, 2023.}
+    {\url{https://github.com/mukeshtiwari/secure-e-voting-with-coq}}.
+    (co-developer with Thomas Haines. I proved facts related to zero-knowledge proof in 
+    the Coq theorem prover; project duration: 2 years).}
+
+
+\cvitem{[3]}{{Nadim Kobeissi, Georgio Nicolas, and Mukesh Tiwari. 
+    Verifpal: Cryptographic Protocol Analysis for the Real World. In Karthikeyan 
+    Bhargavan, Elisabeth Oswald, and Manoj Prabhakaran, editors, Progress in Cryptology - INDOCRYPT 2020, 
+    pages 151--202, Cham, 2020. Springer International Publishing.}
+    (co-developer with Georgio Nicolas. I worked on proofs related to Verifpal model in Coq;
+    project duration: 8 months)}
+    
+\cvitem{[4]}{{Thomas Haines, Rajeev Gor{\'e}, and Mukesh Tiwari. 
+    Verified Verifiers for Verifying Elections. In Proceedings of the 2019 ACM SIGSAC Conference on 
+    Computer and Communications Security, CCS '19, page 685--702, New York, NY, 
+    USA, 2019. Association for Computing Machinery.}
+    {\url{https://github.com/mukeshtiwari/secure-e-voting-with-coq}}.
+    (co-developer with Thomas Haines. I worked on efficient finite field arithmetic, required 
+    for efficient zero-knowledge proof validation of well-formedness of a ballot;
+    project duration: 1 year)}
+
+\cvitem{[5]}{{Thomas Haines, Dirk Pattinson, and Mukesh Tiwari.} 
+    {Verifiable Homomorphic Tallying for the Schulze Vote Counting Scheme, 
+    In Verified Software: Theories, Tools, and Experiments. Springer, 2019.}
+    {\url{https://github.com/mukeshtiwari/EncryptionSchulze/tree/master/code/Workingcode}}
+    (lead developer, project duration: 2 years)}
+
+
+\cvitem{[6]}{{Milad K. Ghale, Rajeev Gor{\'e}, Dirk Pattinson, and Mukesh Tiwari.
+    Modular Formalisation and Verification of STV Algorithms. In Robert Krimmer, Melanie Volkamer, 
+    V{\'e}ronique Cortier, 
+    Rajeev Gor{\'e}, Manik Hapsara, Uwe Serd{\"u}ltt, and David Duenas-Cid, editors, 
+    Electronic Voting, pages 51--66, Cham, 2018. Springer International Publishing.}
+    {\url{https://github.com/mukeshtiwari/Modular-STVCalculi}}.
+    (co-developer with Milad K. Ghale. I proved some of the critical theorems, required for 
+    code extraction; project duration: 8 months)}
+
+\cvitem{[7]}{{Lyria Bennett Moses, Rajeev Gor{\'e}, Ron Levy, Dirk Pattinson, and Mukesh Tiwari.}
+    {No More Excuses: Automated Synthesis of Practical and Verifiable Vote-Counting Programs for Complex Voting Schemes.}
+    {In Robert Krimmer, Melanie Volkamer, Nadja Braun Binder, Norbert Kersting, Olivier Pereira, and Carsten Sch{\"u}rmann, 
+    editors, Electronic Voting, pages 66--83, Cham, 2017. Springer International Publishing.}
+    {\url{https://github.com/mukeshtiwari/formalized-voting/tree/master/SchulzeOCaml}}
+    (lead developer, project duration: 8 months)}
+
+\cvitem{[8]}{{Dirk Pattinson and Mukesh Tiwari.} {Schulze Voting as Evidence Carrying Computation}. 
+    {In Mauricio Ayala-Rinc{\'o}n 
+    and C{\'e}sar A, Mu{\~{n}}oz, editors, \textit{Interactive Theorem Proving}, pages 410--426.
+    Cham, 2017. Springer International Publishing.}
+    {\url{https://github.com/mukeshtiwari/formalized-voting/blob/master/paper-code}} 
+    (lead developer, project duration: 1 year)}
+
+
+
+\cvitem{[9]}{{Mukesh Tiwari, Karm V. Arya, Rahul Choudhari, and Kumar S. Choudhary. 
+    Designing Intrusion Detection to Detect Black Hole and Selective Forwarding Attack in 
+    WSN Based on Local Information. In 2009 Fourth International Conference on Computer 
+    Sciences and Convergence Information Technology, pages 824--828, Nov 2009.}
+    (lead developer; project duration: 1 year)}
+
+\cvitem{[10]}{{Rahul Choudhari, Karm V. Arya, Mukesh Tiwari, and Kumar S. Choudhary. 
+    Performance Evaluation of SCTP-Sec: A Secure SCTP Mechanism. In 2009 Fourth 
+    International Conference on Computer Sciences and Convergence Information Technology, 
+    pages 1111--1116, Nov 2009.}
+    (co-developer with Rahul Choudhari; project duration: 1 year)}
+    
+
+%\nocite{*}
+%\bibliographystyle{plainyr-rev}
+%\bibliography{publications}
+
+\section{Workshop Publications}
+\cvitem{[1]}{{Mukesh Tiwari and Dirk Pattinson}.
+        {Machine Checked Properties of the Schulze Method}.
+        {7th Workshop on Hot Issues in Security Principles and Trust} {2021}.}
+\cvitem{[2]}{{Mukesh Tiwari}. {Towards Leakage-Resistant Machine Learning in Trusted Execution Environments}.
+    {Program Analysis and Verification on Trusted Platforms (PAVeTrust) Workshop} {2021}.}
+\cvitem{[3]}{{Nadim Kobeissi, Georgio Nicolas, and Mukesh Tiwari.}
+    {Verifpal: Cryptographic Protocol Analysis for the Real World.}
+    {Proceedings of the 2020 ACM SIGSAC Conference on Cloud Computing Security Workshop} {2020}.}
+\cvitem{[4]}{{Gidon Ernst, Toby Murray, and Mukesh Tiwari}.
+    {Verifying the Security of a PGP Keyserver}. {VerifyThis challenge 2020}.}
+
+\section{Work in Progress}
+\cvitem{[1]}{Modelling Networking Protocols Mathematically. In this work, we develop 
+    a formally verified framework that researchers can use to verify 
+    the properties of their protocols (joint work Nobuko Yoshida and Mina Cyrus. In this work, 
+    I formally verified generalised graph algorithm on semiring  algebra in 
+    the Coq theorem prover). (submitted to TACAS 2025).
+    \url{https://github.com/mukeshtiwari/Semiring_graph_algorithm}}   
+
+\cvitem{[2]}{Formally Verified Verifiable Group Generators. In this work, we develop a formally 
+    verified algorithm that can be used to bootstrap a democratic election (joined work with Mina Cyrus). (submitted to FSEN 2025).
+    \url{https://github.com/mukeshtiwari/Formally_Verified_Verifiable_Group_Generator}.}
+
+       
+\cvitem{[3]}{An Algebraic Framework for Multi-Objective Optimisation. In this work, we develop 
+    a formally verified framework in the Coq theorem prover that can be used to model 
+    various multi-objective 
+    optimisation problem as a graph algorithm in the semiring framwork. 
+    (sole author). (ongoing).
+    \url{https://github.com/mukeshtiwari/Formally-Verified-MultiObjective-Optimisation}}   
+       
+\cvitem{[4]}{Theorem Provers to Protect Democracies. In this work, we are formalising 
+    all the cryptographic components written in Java of SwissPost in the Coq theorem
+    prover. Our goal is to replace the SwissPost Java 
+    implementations ({\url{https://bit.ly/3EODmnF}})
+	with mathematically proven correct Coq implementations to
+    write an independent verifier for the scrutiny sheet of elections conducted by 
+    Swiss Post software programs (joint work with Bas Spitters and 
+    Berry Schoenmakers) (work in progress and planning to submit to IEEE S\&P 2024).
+    \url{https://github.com/mukeshtiwari/Dlog-zkp}.}
+\cvitem{[5]}{{Machine Checked Properties of the Schulze Method. In this work, 
+    we are formally verifying all the (social choice) properties of the Schulze method.
+    (lead developer, joint work with Dirk Pattionson) (work in progress).}
+    {\url{https://github.com/mukeshtiwari/Schulzeproperties}}.}
+
+
+\section{Community Service (Reviewer)}
+\cvitem{[1]}{ACM Transactions on Privacy and Security}
+\cvitem{[2]}{Sadhana - Academy Proceedings in Engineering Sciences}
+\cvitem{[3]}{IEEE Security \& Privacy}
+    
 \section{Skills}
-\cvitem{Coding}{Coq, Haskell, OCaml, Lean,  Python, C}
+\cvitem{Coding}{Coq, Lean, Haskell, OCaml, Python, C, Racket}
 \cvitem{Language}{Hindi, English}
 
 %\section{Interests}
@@ -134,50 +282,27 @@ written in Haskell.}
 \cvitem{} {Full Scholarship to attend DeepSpec Summer School 2018, Princeton University}
 \cvitem{} {Travel Scholarship to attend Marktoberdorf Summer School 2019}
 
-
-\nocite{*}
-\bibliographystyle{plainyr-rev}
-\bibliography{publications}
-
-
-\section{Work in Progress}
-\cvitem{1}{Verified Secure Declassification for Concurrent Applications. In this work, 
-    we develop a formal model of leaking sensitive data.}
-\cvitem{2}{Formally Verified Verifiable Group Generators. In this work, we develop a formally 
-    verified algorithm that can be used to bootstrap a democratic election.}
-\cvitem{3}{Modelling Networking Protocols Mathematically. In this work, we develop 
-    a formally verified framework that a network protocol designer can use to verify 
-    the security properties of their protocol}      
-\cvitem{4}{Machine Checking the Bayer-Groth Proof of Shuffle. In this work, 
-    we formalise the  Bayer-Groth Proof of Shuffle, used in many democratic elections 
-    to shuffle the ballot.}
-\cvitem{5}{Theorem Provers to Protect Democracies. In this work, we are formalising 
-    all the cryptographic components, written in Java, used in Swiss Post in Coq theorem
-    prover. Our goal is to write an independent verifier for scrutine sheet of  elections conducted by 
-    Swiss Post software programs.}
-  
-
 \section{References}
 \begin{cvcolumns}
   \cvcolumn{}{\begin{itemize}\item Dirk Pattinson, Research School of Computer Science, Australian National University, Canberra, dirk.pattinson@anu.edu.au
    \end{itemize}}
    \end{cvcolumns}
 \begin{cvcolumns}
-  \cvcolumn{}{\begin{itemize}\item Timothy Griffin, Computer Laboratory,  University of Cambridge, Cambridge, tgg22@cam.ac.uk
-   \end{itemize}}
+    \cvcolumn{}{\begin{itemize}\item Toby Murray, School of Computing and Information Systems, University of Melbourne, Melbourne, toby.murray@unimelb.edu.au
+     \end{itemize}}
 \end{cvcolumns}
 \begin{cvcolumns}
-  \cvcolumn{}{\begin{itemize}\item Thomas Haines, Research School of Computer Science, Australian National University, Canberra, thomas.haines@anu.edu.au
-   \end{itemize}}
+    \cvcolumn{}{\begin{itemize}\item Nobuko Yoshida, Department of Computer Science, University of Oxford, Oxford, nobuko.yoshida@cs.ox.ac.uk
+     \end{itemize}}
 \end{cvcolumns}
 \begin{cvcolumns}
-  \cvcolumn{}{\begin{itemize}\item Toby Murray, School of Computing and Information Systems, University of Melbourne, Melbourne, toby.murray@unimelb.edu.au
-   \end{itemize}}
-\end{cvcolumns}
-\begin{cvcolumns}
-  \cvcolumn{}{\begin{itemize}\item  V{\'e}ronique Cortier, Research Director, CNRS, LORIA, Nancy, France, veronique.cortier@loria.fr
-   \end{itemize}}
-\end{cvcolumns}
+    \cvcolumn{}{\begin{itemize}\item Thomas Haines, Research School of Computer Science, Australian National University, Canberra, thomas.haines@anu.edu.au
+     \end{itemize}}
+  \end{cvcolumns}
+
+
+
+%\section{Publications}
 
 
 % Publications from a BibTeX file without multibib
